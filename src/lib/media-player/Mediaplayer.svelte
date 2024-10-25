@@ -156,6 +156,7 @@
         align-items: center;
         justify-content: flex-end;
         padding: 0.5rem;
+        margin-left: auto;
 
         @media only screen and (min-width: 600px) and (max-width: 980px){
             justify-content: flex-end;
