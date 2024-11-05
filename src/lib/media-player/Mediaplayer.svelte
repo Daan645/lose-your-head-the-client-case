@@ -3,8 +3,8 @@
         <section class="audio__player">
             <!-- navigation media player-->
             <ul class="audio__list">
-                <li class="audio__link"><a alt="LIVE" href="/">LIVE</a></li>
-                <li class="audio__link"><a alt="STATIONS" href="/">STATIONS</a></li>
+                <li class="audio__link"><a alt="live" href="/">LIVE</a></li>
+                <li class="audio__link"><a alt="stations" href="/">STATIONS</a></li>
                 <li><img  width="93px" class="audio__list-link" alt="pop out" src="/Pop-out.svg"></li>
             </ul>
 
