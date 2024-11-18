@@ -59,15 +59,17 @@
 
 <!-- HTML -->
 
-<section>
+<section class="month-overview">
+<h2>November 2024</h2>
+<section class="day-carousel">
   <button
     class="navigation-buttons"
     on:click={scrollLeft}
     aria-label="Scroll naar links"
   >
     <svg
-      width="7"
-      height="12"
+      width="28"
+      height="36"
       viewBox="0 0 7 12"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -100,8 +102,8 @@
     aria-label="Scroll naar rechts"
   >
     <svg
-      width="7"
-      height="12"
+      width="28"
+      height="36"
       viewBox="0 0 7 12"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -113,17 +115,30 @@
     </svg>
   </button>
 </section>
+</section>
 
 <style>
-  section {
 
+  .month-overview{
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2{
+    font-size: 1.3em;
+    margin: 0 auto;
+    @media screen and (min-width: 500px) {
+      font-size: 1.7em;
+    }
+  }
+ .day-carousel {
     position: relative;
     display: flex;
-    width: 90vw;
     margin: 0 auto;
     overflow: hidden; /* Verberg inhoud die buiten het zicht valt */
+    width: 90vw;
     @media screen and (min-width: 960px) {
-      max-width: 50vw;
+      max-width: 60vw;
       font-size: 1.5em;
     }
   }
@@ -143,8 +158,8 @@
     z-index: 2; /* Zorg dat de knoppen boven de blur-elementen staan */
   }
 
-  section::before,
-  section::after {
+  .day-carousel::before,
+  .day-carousel::after {
     content: "";
     position: absolute;
     top: 0;
@@ -154,7 +169,7 @@
     z-index: 1; /* Plaats de blur onder de knoppen */
   }
 
-  section::before {
+  .day-carousel::before {
     left: 1em; /* Plaats de blur naast de eerste knop */
     background: linear-gradient(
       to right,
@@ -163,7 +178,7 @@
     ); /* Linker blur */
   }
 
-  section::after {
+  .day-carousel::after {
     right: 1em; /* Plaats de blur naast de laatste knop */
     background: linear-gradient(
       to left,
@@ -192,7 +207,11 @@
   }
 
   .button-active {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
+    color: var(--light);
+  }
+
+  .button-active span:first-of-type {
     color: var(--light);
   }
 
@@ -201,6 +220,21 @@
     color: var(--light);
     scale: 0.9;
   }
+
+  button:hover span:first-of-type {
+    color: var(--light);
+  }
+
+  button span:first-of-type {
+color: #5D5D5D;
+font-size: 0.8em;
+  }
+
+  button span:nth-of-type(2){
+    font-size: 1.5em;
+  }
+
+
 
   .navigation-buttons {
     background-color: var(--primary-color);
