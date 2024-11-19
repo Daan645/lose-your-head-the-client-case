@@ -1,29 +1,57 @@
 <script>
     import { onMount } from "svelte";
 
-    let buttonText = "Verstuur"; //eerste button text
-    let isSubmitting = false; // Kijk of form aan het submitten is
+    let buttonText = "Verstuur"; // Normale button text
+    let isSubmitting = false; // check of de form aan het submitten is
+    let message = ""; //verbind met textarea valleu
 
     async function send(event) {
         event.preventDefault(); 
+        // Zorg ervoor dat textveld eerst gevuld is
+        if (!message.trim()) {
+            alert("Het tekstveld mag niet leeg zijn.");
+            return;
+        }
+
         isSubmitting = true; 
-        buttonText = "Bezig met versturen..."; // Update button text
+        buttonText = "Bezig met versturen..."; // Update de button tekst
 
-        // Hier moet een api call inkomen, maar die doet het nog niet
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        const data = {
+            message: message,
+            date: new Date().toISOString(), // Current date and time in ISO format
+        };
 
-        // nadat form verstuurd  is
-        buttonText = "Verstuurd";
-        isSubmitting = false;
+        try {
+            const response = await fetch("https://fdnd-agency.directus.app/items/mh_logs", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error(`Server error: ${response.status}`);
+            }
+
+            // Assuming the response is successful
+            buttonText = "Verstuurd";
+        } catch (error) {
+            console.error("Er is een fout opgetreden", error);
+            buttonText = "Er is een fout opgetreden";
+        } finally {
+            isSubmitting = false;
+        }
     }
 </script>
 
 
+
 <div>
-    <form class="error-form">
+    <form class="error-form" on:submit={send}>
         <label for="textfield">Wat ging er mis?</label>
-        <textarea spellcheck="true"  placeholder="Vertel wat u deed voor deze error" id="textfield"></textarea>
-        <button on:click={send} class="form-button" type="submit" aria-label="Verstuur uw bericht">{buttonText}</button>
+        <textarea id="textfield" spellcheck="true"  placeholder="Vertel wat u deed voor deze error" bind:value={message} required></textarea>
+        <button class="form-button" type="submit" aria-label="Verstuur uw bericht" disabled={isSubmitting}>{buttonText}</button>
     </form>
     <p>Alle velden gemarkeerd als vereist moeten worden voltooid</p>
 </div>
