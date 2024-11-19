@@ -13,7 +13,6 @@
     color: var(--dark);
     font-weight: 600;
     font-family: var(--font-family);
-    padding: 1em 0em;
     transition: ease-in 0.2s;
   }
 
