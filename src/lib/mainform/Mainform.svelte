@@ -21,7 +21,7 @@
 
 <div>
     <form class="error-form">
-        <label for="textfield">Wat is er mis gegaan</label>
+        <label for="textfield">Wat ging er mis?</label>
         <textarea spellcheck="true"  placeholder="Vertel wat u deed voor deze error" id="textfield"></textarea>
         <button on:click={send} class="form-button" type="submit" aria-label="Verstuur uw bericht">{buttonText}</button>
     </form>
