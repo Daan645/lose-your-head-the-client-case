@@ -3,8 +3,8 @@
         <section class="audio__player">
             <!-- navigation media player-->
             <ul class="audio__list">
-                <li class="audio__link"><a alt="live" href="/">LIVE</a></li>
-                <li class="audio__link"><a alt="stations" href="/">STATIONS</a></li>
+                <li class="audio__link"><a href="/">LIVE</a></li>
+                <li class="audio__link"><a href="/">STATIONS</a></li>
                 <li><img  width="93px" class="audio__list-link" alt="pop out" src="/Pop-out.svg"></li>
             </ul>
 
@@ -59,7 +59,7 @@
                         </section>
                     </div>
                     <article class="audio__lijst">
-                        <a class="audio__lijst-link" alt="link naar volledige lijst" href="/">
+                        <a class="audio__lijst-link" href="/">
                             Volledige lijst<img class="audio__pijl" width="93px" src="/pijl.svg" alt="pijl icoon volgende lijst">
                         </a>
                     </article>
