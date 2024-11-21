@@ -197,12 +197,15 @@
     justify-content: center;
     align-items: center;
     border: none;
+    outline: none;
     background-color: rgb(239, 239, 239);
     font-family: var(--font-family);
     padding: 1em;
     font-size: 0.9em;
     cursor: pointer;
-    transition: 0.2s ease-in;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: 0.2s ease-in;
+    }
     font-weight: bold;
   }
 
@@ -215,13 +218,19 @@
     color: var(--light);
   }
 
-  button:hover {
+ 
+    button:hover,
+  button:focus
+  {
     background-color: var(--primary-color);
     color: var(--light);
-    scale: 0.9;
+    @media (prefers-reduced-motion: no-preference) {
+      scale: 0.9;
+    }
   }
 
-  button:hover span:first-of-type {
+  button:hover span:first-of-type,
+  button:focus span:first-of-type {
     color: var(--light);
   }
 
@@ -241,7 +250,8 @@ font-size: 0.8em;
     padding: 0.5em;
   }
 
-  .navigation-buttons:hover {
+  .navigation-buttons:hover,
+  .navigation-buttons:focus {
     background-color: var(--hover-secondary);
   }
   .navigation-buttons:first-of-type {
