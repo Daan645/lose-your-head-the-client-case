@@ -158,3 +158,25 @@ li {
 body {
    background-color: #FAFAFA
 }
+
+
+/* skip links */
+.skiplink {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: black;
+  padding: 10px;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.skiplink a {
+  color: black;
+  text-decoration: none;
+}
+
+.skiplink:focus {
+  top: 20px;
+}
