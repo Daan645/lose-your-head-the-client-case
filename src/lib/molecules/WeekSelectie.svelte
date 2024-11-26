@@ -80,7 +80,6 @@ let showCurrentMonth = monthNames[month];
 </script>
 
 <!-- HTML -->
-
 <section class="month-overview">
   <!-- Get the current month and year value from the variables and print it on the screen -->
 <h2>{showCurrentMonth} {year}</h2>
@@ -107,9 +106,9 @@ let showCurrentMonth = monthNames[month];
   <ol bind:this={carousel}>
     <!-- Ga de daysinmonth array af en geef de uitkomsten weer als dayofweek en day -->
     {#each daysInMonth as { dayOfWeek, day }}
-      <li>
+    <li >
         <!-- als de dag gelijk is aan de nummer van de huidige dag krijgt de button de active class -->
-        <button class:button-active={day === currentDayNumber}>
+        <button class:button-active={day === currentDayNumber} class:new-week={dayOfWeek === "zondag"}>
           <!-- Weergeef de dag in een string-->
           <span>{dayOfWeek}</span>
           <!-- Weergeef de dag als een nummer -->
@@ -210,10 +209,6 @@ let showCurrentMonth = monthNames[month];
     ); /* Rechter blur */
   }
 
-  li button {
-    border-radius: 5px;
-  }
-
   button {
     display: flex;
     flex-direction: column;
@@ -242,13 +237,14 @@ let showCurrentMonth = monthNames[month];
   }
 
  
-    button:hover,
-  button:focus
+  li  button:hover,
+  li button:focus
   {
     background-color: var(--primary-color);
     color: var(--light);
+    border-radius: 15px;
     @media (prefers-reduced-motion: no-preference) {
-      scale: 0.9;
+      scale: 0.90;
     }
   }
 
@@ -271,6 +267,8 @@ font-size: 0.8em;
   .navigation-buttons {
     background-color: var(--primary-color);
     padding: 0.5em;
+   
+
   }
 
   .navigation-buttons:hover,
@@ -285,5 +283,14 @@ font-size: 0.8em;
   .navigation-buttons:last-of-type {
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
+  }
+
+  .new-week {
+    border-right: solid 8px var(--secondary-color);
+
+    @media screen and (min-width: 960px) {
+      border-right: solid 10px var(--secondary-color);
+
+    }
   }
 </style>
