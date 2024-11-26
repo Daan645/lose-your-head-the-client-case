@@ -39,6 +39,11 @@
   // Maak de variabele carousel aan
   let carousel;
 
+  // haal de huidige dag op
+  let currentDayNumber = dateAndTime.getDate();
+
+  // Scroll funcies
+
   // Scroll naar links
   const scrollLeft = () => {
     if (carousel) {
@@ -53,8 +58,7 @@
     }
   };
 
-  // haal de huidige dag op
-   let currentDayNumber = dateAndTime.getDate();
+  
 </script>
 
 <!-- HTML -->
@@ -65,8 +69,8 @@
   <button
     class="navigation-buttons"
     on:click={scrollLeft}
-    aria-label="Scroll naar links"
   >
+  <title>Scroll naar links</title>
     <svg
       width="28"
       height="36"
@@ -86,7 +90,7 @@
     {#each daysInMonth as { dayOfWeek, day }}
       <li>
         <!-- als de dag gelijk is aan de nummer van de huidige dag krijgt de button de active class -->
-        <button class={day === currentDayNumber ? "button-active" : ""}>
+        <button class:button-active={day === currentDayNumber}>
           <!-- Weergeef de dag in een string-->
           <span>{dayOfWeek}</span>
           <!-- Weergeef de dag als een nummer -->
@@ -99,8 +103,8 @@
   <button
     class="navigation-buttons"
     on:click={scrollRight}
-    aria-label="Scroll naar rechts"
   >
+  <title>Scroll naar rechts</title>
     <svg
       width="28"
       height="36"
