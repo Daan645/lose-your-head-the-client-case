@@ -58,13 +58,32 @@
     }
   };
 
+// Create an array that shows al the month names in the right order
+  const monthNames = [
+  "januari",
+  "februari",
+  "maart",
+  "april",
+  "mei",
+  "juni",
+  "juli",
+  "augustus",
+  "september",
+  "oktober",
+  "november",
+  "december",
+];
+
+// Get the name of the month, the month variable gives the current month in a digit, I use this value to get the right name of the month from the array
+let showCurrentMonth = monthNames[month];
   
 </script>
 
 <!-- HTML -->
 
 <section class="month-overview">
-<h2>November 2024</h2>
+  <!-- Get the current month and year value from the variables and print it on the screen -->
+<h2>{showCurrentMonth} {year}</h2>
 <section class="day-carousel">
   <button
     class="navigation-buttons"
