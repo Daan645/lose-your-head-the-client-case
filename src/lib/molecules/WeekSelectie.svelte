@@ -221,12 +221,12 @@ let showCurrentMonth = monthNames[month];
     padding: 1em;
     font-size: 0.9em;
     cursor: pointer;
+    font-weight: bold;
     @media (prefers-reduced-motion: no-preference) {
       transition: 0.2s ease-in;
     }
-    font-weight: bold;
   }
-
+ 
   .button-active {
     background-color: var(--secondary-color);
     color: var(--light);
@@ -236,7 +236,7 @@ let showCurrentMonth = monthNames[month];
     color: var(--light);
   }
 
- 
+
   li  button:hover,
   li button:focus
   {
@@ -244,7 +244,7 @@ let showCurrentMonth = monthNames[month];
     color: var(--light);
     border-radius: 15px;
     @media (prefers-reduced-motion: no-preference) {
-      scale: 0.90;
+      scale: 0.9;
     }
   }
 
@@ -267,14 +267,16 @@ font-size: 0.8em;
   .navigation-buttons {
     background-color: var(--primary-color);
     padding: 0.5em;
-   
-
   }
 
   .navigation-buttons:hover,
   .navigation-buttons:focus {
     background-color: var(--hover-secondary);
+    @media (prefers-reduced-motion: no-preference) {
+      scale: 0.9;
+    }
   }
+  
   .navigation-buttons:first-of-type {
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
