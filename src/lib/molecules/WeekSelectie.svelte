@@ -74,9 +74,11 @@
   "december",
 ];
 
+
 // Get the name of the month, the month variable gives the current month in a digit, I use this value to get the right name of the month from the array
 let showCurrentMonth = monthNames[month];
-  
+
+let slug;
 </script>
 
 <!-- HTML -->
@@ -108,7 +110,7 @@ let showCurrentMonth = monthNames[month];
     {#each daysInMonth as { dayOfWeek, day }}
     <li >
         <!-- als de dag gelijk is aan de nummer van de huidige dag krijgt de button de active class -->
-        <button class:button-active={day === currentDayNumber} class:new-week={dayOfWeek === "zondag"}>
+        <button on:click={slug = day} class:button-active={day === currentDayNumber} class:new-week={dayOfWeek === "zondag"}>
           <!-- Weergeef de dag in een string-->
           <span>{dayOfWeek}</span>
           <!-- Weergeef de dag als een nummer -->
