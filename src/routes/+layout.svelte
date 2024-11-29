@@ -1,12 +1,11 @@
 <script>
     import Header from "../lib/organism/Header.svelte";
-    import Mobilenav2 from "../lib/organism//Mobilenav2.svelte";
+    import Mobilenav from "../lib/organism/Mobilenav.svelte";
     import Footer from '../lib/organism/Footer.svelte';
 </script>
 
 <Header/>
-<Mobilenav2/>
+<Mobilenav/>
 <slot></slot>
-
 <Footer/>  
 
