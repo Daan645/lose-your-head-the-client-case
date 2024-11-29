@@ -54,7 +54,7 @@
   };
 
   // haal de huidige dag op
-   let currentDayNumber = dateAndTime.getDate();
+  let currentDayNumber = dateAndTime.getDate();
 </script>
 
 <!-- HTML -->
@@ -116,13 +116,14 @@
 
 <style>
   section {
+    margin: 1rem;
 
     position: relative;
     display: flex;
     width: 90vw;
-    margin: 0 auto;
     overflow: hidden; /* Verberg inhoud die buiten het zicht valt */
     @media screen and (min-width: 960px) {
+      margin-left: calc(2rem + 105px);
       max-width: 50vw;
       font-size: 1.5em;
     }
