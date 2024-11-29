@@ -4,10 +4,6 @@
 
     export let data;
 </script>
-<div class="skiplink">
-    <a href="#weekSelectie">Naar kalender</a>
-    <a href="#schedule">Naar schema</a>
-</div>
 
 <main>
     <WeekSelectie/>
