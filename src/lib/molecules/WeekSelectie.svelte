@@ -39,7 +39,6 @@
   let carousel;
   // haal de huidige dag op
   let currentDayNumber = dateAndTime.getDate();
-
   // Create an array that shows al the month names in the right order
   const monthNames = [
   "januari",
@@ -138,10 +137,13 @@
     position: relative;
     display: flex;
     margin: 0 auto;
+    width: 90vw;
     overflow: hidden; /* Verberg inhoud die buiten het zicht valt */
     width: 90vw;
     @media screen and (min-width: 960px) {
       max-width: 60vw;
+      margin-left: calc(2rem + 105px);
+      max-width: 50vw;
       font-size: 1.5em;
     }
   }
