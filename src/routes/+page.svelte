@@ -16,6 +16,9 @@
 </main>
 
 <style>
+main {
+  overflow-x: hidden;
+}
   :global(section:has(.navigation-buttons)) {
     grid-area: weekselectie;
   }

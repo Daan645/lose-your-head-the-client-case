@@ -124,6 +124,10 @@
   .month-overview{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 980px) {
+      margin: 2em 18em 0 0;
+    }
   }
 
   h2{
@@ -136,15 +140,15 @@
  .day-carousel {
     position: relative;
     display: flex;
-    margin: 0 auto;
-    width: 90vw;
+    width: 60vw;
     overflow: hidden; /* Verberg inhoud die buiten het zicht valt */
-    width: 90vw;
+    /* margin-left: calc(2rem + 105px); */
     @media screen and (min-width: 960px) {
-      max-width: 60vw;
-      margin-left: calc(2rem + 105px);
-      max-width: 50vw;
       font-size: 1.5em;
+    }
+    @media screen and (min-width: 500px) {
+    width: 50vw;
+    
     }
   }
 
