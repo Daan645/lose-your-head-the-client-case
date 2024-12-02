@@ -16,6 +16,7 @@
 </main>
 
 <style>
+
   :global(section:has(.navigation-buttons)) {
     grid-area: weekselectie;
   }
@@ -39,6 +40,7 @@
         "radioplayer weekselectie"
         "radioplayer schedule"
         "radioplayer footer";
+        overflow-x: hidden;
     }
   }
 </style>
