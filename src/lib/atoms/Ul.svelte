@@ -1,6 +1,9 @@
-<script>
-    import Button from "./Button.svelte";
-  
+<script>  
+    
+    export let title = false;
+    export let titleText = "";
+    export let titleSize = "var(--h2-text-size)";
+    export let titleColor = "var(--dark)";
     export let numberOfLi = 0;
     export let text = [ ];
     export let textColor = "var(--dark)";
@@ -12,7 +15,13 @@
     export let label = [ ];
   </script>
   
-  <ul>
+<section class="ul-component">
+  {#if title}
+  <h2 style="font-size:{titleSize}; color: {titleColor};">{titleText}</h2> 
+  {:else}
+<!-- geen title -->
+  {/if}
+  <ul class="ul-component-list">
     {#each Array(numberOfLi) as _, index}
       <li style="list-style-type: {styleType};">
         <a href={href[index] || "#"} aria-label={label[index]}>
@@ -21,10 +30,17 @@
       </li>
     {/each}
   </ul>
+</section>
   
   <style>
     /* Voeg je eigen styling hier toe */
-  a {
+  section {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  
+    a {
     cursor: pointer;
   }
   </style>

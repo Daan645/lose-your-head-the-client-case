@@ -6,7 +6,7 @@
     export let bold ="bold"
 </script>
 
-<span style="color: {textColor}; font-size: {textSize}; font-weight: {bold};">{text}</span>
+<span class="span-component" style="color: {textColor}; font-size: {textSize}; font-weight: {bold};">{text}</span>
 
 <style>
 
