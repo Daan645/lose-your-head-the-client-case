@@ -2,64 +2,92 @@
      import Homelink from '../../lib/homelink/Homelink.svelte';
      import Mainform from '../../lib/mainform/Mainform.svelte';
 </script>
-
-<section class="error-page">
-    <div class="flex-left"> 
-        <Homelink/>
-        <h1>403</h1>
-        <h2>Laten we dat oplossen</h2>
+<section class="hero">
+    <!-- <Homelink/> -->
+    <h1> Error </h1>
+    <h2>Laten we dat oplossen</h2>
+    <img src="output-onlinepngtools 1.png">
+</section>
+<section class="sectionpin">
+    <div class="pin-wrap-sticky flex-left"> 
+        <div class="pin-wrap">
+            <Mainform/>
+        </div>
     </div>
-    <div class="flex-right">
-        <Mainform/>
-    </div>
+   
 </section>
 
 <style>
-    .error-page{
-        padding: 2em 2em;
-        gap: 2em;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .error-page .flex-left .flex-right{
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-    }
-
-    .error-page .flex-left h1{
-        margin-top: 0.25em;
-        font-size: 6em;
-        color: var(--secondary-color);
-    }
-
-    .error-page .flex-left h2{
-        font-size: 1.5em;
-        font-weight: 500;
-    }
-
-    .error-page .flex-right{
-        display: flex;
-        flex-direction: column;
-    }
-
     @media only screen and (min-width: 600px) and (max-width: 960px) {
-        .error-page {
-            margin: 0 auto;
-            max-width: 520px;
-        }
     }
     @media only screen and (min-width: 960px) {
-        .error-page {
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-            gap: 5em;
-        }
 
-        .error-page h1{
-            font-size: 7em;
-        }
+            .hero{
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--grey);
+                 
+            }
+
+            .hero h1{
+                margin-left: 000px;
+                color: var(--primary-color);
+                font-size: 6em;
+                transform: rotate(270deg);
+                z-index: 10;
+                text-transform: uppercase;
+                text-shadow: 6px 6px 0px black;
+            }
+            .hero h2{
+                color: var(--light);
+                position: absolute;
+                margin-right: -500px;
+                z-index: 10;
+                text-transform: uppercase;
+                text-shadow: 4px 4px 0px black;
+            }
+
+            .hero img{
+                height: 50vw;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: 0;
+            }
+            .sectionpin{
+                height: 400vh;
+                overflow: visible;
+                view-timeline-name: --section-pin-tl;
+                view-timeline-axis: block;
+            }
+
+        @keyframes move {
+            to {
+                /* Move horizontally so that right edge is aligned against the viewport */
+                transform: translateX(calc(-100% + 100vw));
+            }
+            }
+
+            .pin-wrap-sticky {
+                /* Stick to Top */
+                height: 100vh;
+                width: 100vw;
+                position: sticky;
+                top: 0;
+                width: 100vw;
+                overflow-x: hidden;
+            }
+
+            .pin-wrap {
+                height: 100vh;
+                width: 250vmax;
+                will-change: transform;
+                animation: linear move forwards;
+                animation-timeline: --section-pin-tl;
+                animation-range: contain 0% contain 100%;
+            }
     }
 </style>

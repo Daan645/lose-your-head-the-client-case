@@ -12,15 +12,11 @@
   --p-text-size: 1em;
 
   /* colors */
-  --primary-color: #0091ff;
-  --secondary-color: #fe0070;
-  --tertairy: #8b8b8b;
-  --grey: #8b8b8b;
-  --dark: #1e1e1e;
+  --primary-color: #6E0000;
+  --secondary-color: #494949;
+  --grey: #393939;
+  --dark: #000000;
   --light: #ffff;
-  --color-footer: #011564;
-  --hover: #a11753;
-  --hover-secondary: #0e76c6;
 
 
   /* radius */

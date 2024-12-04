@@ -47,79 +47,47 @@
 
 
 
-<div>
+<div class="wrapper">
     <form class="error-form" on:submit={send}>
-        <label for="textfield">Wat ging er mis?</label>
-        <textarea id="textfield" spellcheck="true"  placeholder="Vertel wat u deed voor deze error" bind:value={message} required></textarea>
-        <button class="form-button" type="submit" aria-label="Verstuur uw bericht" disabled={isSubmitting}>{buttonText}</button>
+        <div>
+            <label  for="emailfield">Wat ging er mis?</label>
+            <input type="email" placeholder="Email invullen">
+        </div>
+        <div>
+            <label  for="textfield">Wat ging er mis?</label>
+            <textarea id="textfield" spellcheck="true"  placeholder="Vertel wat u deed voor deze error" bind:value={message} required></textarea>
+        </div>
+        <div>
+            <button class="form-button" type="submit" aria-label="Verstuur uw bericht" disabled={isSubmitting}>{buttonText}</button>
+        </div>
     </form>
-    <p>Alle velden gemarkeerd als vereist moeten worden voltooid</p>
 </div>
 
 <style>
+
     form{
-        padding: 2em 0em;
+        display: grid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        height: 100%;
+    }
+    form > div{
+        padding: 8em;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1em;
     }
 
-    form label{
-        font-size: 1.5em;
-        font-family: var(--font-family);
-        font-weight: 600;
+    form div:nth-child(1){
+        background-color: var(--primary-color);
     }
-
-    form textarea{
-        width: 100%;
-        min-height: 200px;
-        padding: 1.5em;
-        background-color: #D9D9D9;
-        border: none;
-        border-radius: 0.25em;
-        font-size: 1.1em;
+    form div:nth-child(2){
+        background-color: var(--grey);
     }
-
-    form textarea::placeholder{
-        color: var(--dark);
+    form div:nth-child(3){
+        background-color: var(--secondary-color);
     }
-
-    form button{
-    border-radius: 0.5em;
-    font-size: 1.1em;
-    font-weight: bold;
-    border: none;
-    padding: 0.5em 1.5em 0.5em 1.5em;
-    cursor: pointer;
-    background-color: var(--secondary-color);
-    color: var(--light);
-    scale: 100%;
-    transition: ease-in 0.2s;
+    .wrapper{
+        height: 100%;
     }
-
-    form button:hover{
-        cursor: pointer;
-        scale: 95%;
-        color: var(--light);
-        transition: ease-out 0.2s;
-    }
-
-    p{
-        padding-top: 1em;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        form button {
-        transition: none;
-        transform: none;
-        }
-    } 
-
-    @media (prefers-contrast: more) {
-        form button {
-        background-color: var(--dark);
-        }
-    }
-
 </style>
