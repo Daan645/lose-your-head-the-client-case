@@ -11,6 +11,7 @@
 <section class="sectionpin">
     <div class="pin-wrap-sticky flex-left"> 
         <div class="pin-wrap">
+            
             <Mainform/>
         </div>
     </div>
@@ -18,8 +19,7 @@
 </section>
 
 <style>
-    @media only screen and (min-width: 600px) and (max-width: 960px) {
-    }
+    
     @media only screen and (min-width: 960px) {
 
             .circle {
@@ -47,7 +47,6 @@
 		}
             }
    
-
             .hero{
                 height: 100vh;
                 display: flex;

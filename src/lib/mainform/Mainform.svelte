@@ -68,114 +68,126 @@
 </div>
 
 <style>
+    .wrapper {
+    height: 100%;
+}
 
-    form{
-        display: grid;
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    height: 100%;
+}
+
+@media only screen and (min-width: 960px) {
+    form {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
         height: 100%;
     }
-    form > div{
+
+    form > div {
         padding: 8em;
         display: flex;
         flex-direction: column;
     }
 
-    form div:nth-child(1){
+    form div:nth-child(1) {
         background-color: var(--dark);
         margin: 0 auto;
         width: 100%;
         color: var(--secondary-color);
-
-        & input{
-            width: 800px;
-            height: 110px;
-            margin-left: 100px;
-            padding: 1em;
-            background-color: var(--secondary-color);
-            border: none;
-            font-size: 4em;
-
-        }
-
-        & .mailone{
-            text-shadow: 4px 4px 0px var(--grey);
-            font-size: 5em;
-            font-weight: 800;
-            text-transform: uppercase;
-            transform: rotate(270deg);
-            position: absolute;
-            margin-left: -55px;
-            margin-top: 150px;
-        }
-
-        & .mailtwo{
-            text-shadow: 4px 4px 0px var(--grey);
-            font-size: 5em;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
     }
-    form div:nth-child(2){
+
+    form div:nth-child(1) input {
+        width: 800px;
+        height: 110px;
+        margin-left: 100px;
+        padding: 1em;
+        background-color: var(--secondary-color);
+        border: none;
+        font-size: 4em;
+    }
+
+    form div:nth-child(1) .mailone {
+        text-shadow: 4px 4px 0px var(--grey);
+        font-size: 5em;
+        font-weight: 800;
+        text-transform: uppercase;
+        transform: rotate(270deg);
+        position: absolute;
+        margin-left: -65px;
+        margin-top: 170px;
+    }
+
+    form div:nth-child(1) .mailtwo {
+        text-shadow: 4px 4px 0px var(--grey);
+        font-size: 5em;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    form div:nth-child(2) {
         background-color: var(--grey);
-
-        & textarea{
-            width: 1000px;
-            min-height: 410px;
-            margin-left: 100px;
-            padding: 1em;
-            background-color: var(--secondary-color);
-            border: none;
-            font-size: 2em;
-        }
-
-        & .textone{
-            color: var(--primary-color);
-            text-shadow: 6px 6px 0px black;
-            font-size: 5em;
-            font-weight: 800;
-            text-transform: uppercase;
-            transform: rotate(270deg);
-            position: absolute;
-            margin-left: -150px;
-            margin-top: 250px;
-        }
-
-        & .texttwo{
-            color: var(--primary-color);
-            text-shadow: 6px 6px 0px black;
-            font-size: 5em;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
     }
-    form div:nth-child(3){
+
+    form div:nth-child(2) textarea {
+        width: 1000px;
+        min-height: 410px;
+        margin-left: 100px;
+        padding: 1em;
+        background-color: var(--secondary-color);
+        border: none;
+        font-size: 2em;
+    }
+
+    form div:nth-child(2) .textone {
+        color: var(--primary-color);
+        text-shadow: 6px 6px 0px black;
+        font-size: 5em;
+        font-weight: 800;
+        text-transform: uppercase;
+        transform: rotate(270deg);
+        position: absolute;
+        margin-left: -158px;
+        margin-top: 250px;
+    }
+
+    form div:nth-child(2) .texttwo {
+        color: var(--primary-color);
+        text-shadow: 6px 6px 0px black;
+        font-size: 5em;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    form div:nth-child(3) {
         background-color: var(--secondary-color);
         align-items: flex-start;
-        & button{
-            background-color: var(--primary-color);
-            border: none;
-            position: absolute;
-            padding: 3em 3em;
-            font-size: 4em;
-            box-shadow: 35px 35px 0px 10px #4f0000;
-            right: 55px;
-            bottom: 55px;
-            transition: ease-out 0.3s;
-            font-weight: 800;
-            text-transform: uppercase;
+    }
 
-            &:hover{
-                transition: ease-out 0.3s;
-                right: 0px;
-                 bottom: 0px;
-                 color: var(--light);
-                 cursor: pointer;
-            }
-        }
+    form div:nth-child(3) button {
+        background-color: var(--primary-color);
+        border: none;
+        position: absolute;
+        padding: 3em 3em;
+        font-size: 4em;
+        box-shadow: 35px 35px 0px 10px #4f0000;
+        right: 55px;
+        bottom: 55px;
+        transition: ease-out 0.3s;
+        font-weight: 800;
+        text-transform: uppercase;
     }
-    .wrapper{
-        height: 100%;
+
+    form div:nth-child(3) button:hover {
+        transition: ease-out 0.3s;
+        right: 0px;
+        bottom: 0px;
+        color: var(--light);
+        cursor: pointer;
     }
-</style>
+}
+       
+    </style>
