@@ -1,5 +1,4 @@
 <script>  
-    
     export let title = false;
     export let titleText = "";
     export let titleSize = "var(--h2-text-size)";
@@ -43,4 +42,7 @@
     a {
     cursor: pointer;
   }
+
+  /* Polygon 2 */
+
   </style>
