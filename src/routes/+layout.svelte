@@ -4,6 +4,4 @@
   import Footer from "../lib/organism/Footer.svelte";
 </script>
 
-<Header />
-<Mobilenav />
 <slot></slot>

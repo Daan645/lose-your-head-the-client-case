@@ -9,38 +9,5 @@
 </script>
 
 <main>
-  <WeekSelectie class="weekselectie"></WeekSelectie>
   <Schedule class="schedule" {data}></Schedule>
-  <Radioplayer class="radioplayer"></Radioplayer>
-  <Footer class="footer"></Footer>
 </main>
-
-<style>
-
-  :global(section:has(.navigation-buttons)) {
-    grid-area: weekselectie;
-  }
-
-  :global(.schedule) {
-    grid-area: schedule;
-  }
-  :global(article.audio) {
-    grid-area: radioplayer;
-  }
-  :global(footer) {
-    grid-area: footer;
-  }
-
-  @media only screen and (min-width: 982px) {
-    main {
-      display: grid;
-      grid-template-columns: 300px 100%;
-      grid-template-rows: auto;
-      grid-template-areas:
-        "radioplayer weekselectie"
-        "radioplayer schedule"
-        "radioplayer footer";
-        overflow-x: hidden;
-    }
-  }
-</style>
