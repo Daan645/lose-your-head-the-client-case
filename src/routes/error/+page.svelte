@@ -19,12 +19,14 @@
 </section>
 
 <style>
-    
+    .hero{
+        padding: 2em;
+        text-transform: uppercase;
+    }
     @media only screen and (min-width: 960px) {
 
             .circle {
                 perspective: 1000px;
-    
                 position: absolute;
                 display: inline-block;
                 background: black;

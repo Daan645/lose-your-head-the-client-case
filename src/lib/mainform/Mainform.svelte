@@ -73,14 +73,34 @@
 }
 
 form {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    height: 100%;
+    padding: 0em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
+form  input, textarea{
+    display: flex;
+}
+
+form textarea{
+    field-sizing: content;
+}
+
+.mailone , .mailtwo , .textone , .texttwo{
+    display: none;
+}
+
+
 @media only screen and (min-width: 960px) {
+
+    .mailone , .mailtwo , .textone , .texttwo{
+    display: inline;
+    }
+
     form {
+        gap: 0em;
+        padding: 0em;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
@@ -189,5 +209,7 @@ form {
         cursor: pointer;
     }
 }
+
+
        
     </style>
