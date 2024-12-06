@@ -5,6 +5,9 @@
     import Footer from '../lib/organism/Footer.svelte';
     import Popupcard from '../lib/molecules/popupMolecules/popup-card.svelte';
   import PopupCard from "../lib/molecules/popupMolecules/popup-card.svelte";
+
+  
+
 </script>
 
 <!-- <Header/> -->
@@ -45,9 +48,7 @@
         <span></span>
         <article class="liedjes">
             <h2>liedjes</h2>
-            <div class="liedjes-scrollable">
                 <PopupCard />
-            </div>   
         </article>
     </div>
 </div>
@@ -93,18 +94,19 @@
     }
 
     .container {
-        position: relative;
-        width: 100%;
-        max-width: 310px;
-        height: 80px;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin-left: 5px;
-        box-shadow: 7px 3px 25px 0px rgba(213 210 213);
-        padding: 15px;
-        border-radius: 0.5em;
+    position: relative;
+    width: 100%;
+    max-width: 310px;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: 5px;
+    box-shadow: 7px 3px 25px 0px rgba(213 210 213);
+    padding: 15px;
+    border-radius: 0.5em;
+    z-index: 10; 
 
         @media only screen and (min-width: 20.1em) and (max-width: 30em) {
             position: fixed;
@@ -175,34 +177,65 @@
     }
 
     /* POPUP */
-    .overlay-link {
-        position: absolute; 
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 10; 
-        cursor: pointer; 
-        text-indent: -9999px;
-        background: rgba(0, 0, 0, 0); 
-    }
+    /* Make sure the overlay link takes the whole screen space */
+.overlay-link {
+  position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20; 
+    cursor: pointer; 
+    text-indent: -9999px;
+    background: rgba(0, 0, 0, 0);
+}
 
-    .overlay {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        transition: opacity 500ms;
-        visibility: hidden;
-        opacity: 0;
-    }
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 310px;
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: 5px;
+  box-shadow: 7px 3px 25px 0px rgba(213 210 213);
+  padding: 15px;
+  border-radius: 0.5em;
+  z-index: 10;
+}
 
-    .overlay:target {
-        visibility: visible;
-        opacity: 1;
-    }
+.mediaplayer-content p,
+.mediaplayer-content .image-amy {
+  pointer-events: none; 
+}
+
+.mediaplayer-content button,
+.mediaplayer-content img,
+.mediaplayer-content svg {
+  pointer-events: auto; 
+}
+
+
+/* Make sure the overlay is clickable by having a higher z-index than the mediaplayer */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 15;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
 
     .popup {
         /* padding: 20px; */
@@ -251,28 +284,5 @@
         padding: 10px;
         width: 320px;
     }
-
-    /* CSS in layout.svelte */
-    .liedjes-scrollable {
-        max-height: 824px; /* Set the desired height */
-        width: 320px;
-        overflow-y: auto; /* Enable vertical scrolling */
-        scrollbar-width: thin; /* (Optional) Customize scrollbar */
-        scrollbar-color: #ccc transparent; /* (Optional) */
-    }
-
-    .liedjes-scrollable::-webkit-scrollbar {
-        width: 8px; /* Width of the scrollbar */
-    }
-
-    .liedjes-scrollable::-webkit-scrollbar-thumb {
-        background-color: #ccc; /* Color of the scrollbar thumb */
-        border-radius: 4px; /* Rounded corners */
-    }
-
-    .liedjes-scrollable::-webkit-scrollbar-track {
-        background-color: transparent; /* Background of the scrollbar track */
-    }
-
 </style>
 
