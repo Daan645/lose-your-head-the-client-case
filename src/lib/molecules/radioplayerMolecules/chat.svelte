@@ -6,59 +6,74 @@
   <li class="chat__user">user1:</li>
   <li class="chat__verzonden-bericht">Speel many man van 50 cent</li>
   <li class="chat__tijd">18:41</li>
-  <li class="chat__user">user2:</li>
+  <li class="chat__user">user3:</li>
   <li class="chat__verzonden-bericht">Mijn favriete liedje 🤩</li>
   <li class="chat__tijd">18:41</li>
-  <li class="chat__user">user3:</li>
-  <li class="chat__verzonden-bericht">🎶🎶🎶🎶🎶🎶🎶🎶🎶</li>
+  <li class="chat__user">user2:</li>
+  <li class="chat__verzonden-bericht">Deze tune is 🔥🔥🔥</li>
   <li class="chat__tijd">18:41</li>
   <li class="chat__user">user4:</li>
+  <li class="chat__verzonden-bericht">🎶🎶🎶🎶🎶🎶🎶🎶🎶</li>
+  <li class="chat__tijd">18:41</li>
+  <li class="chat__user">user5:</li>
   <li class="chat__verzonden-bericht">Draai is new york van Alicia keys</li>
   <li class="chat__tijd">18:41</li>
-  <li class="chat__user">user3:</li>
+  <li class="chat__user">user6:</li>
   <li class="chat__verzonden-bericht">🎶🎶🎶🎶🎶🎶🎶🎶🎶</li>
   <li class="chat__tijd">18:42</li>
-  <li class="chat__user">user4:</li>
+  <li class="chat__user">user7:</li>
   <li class="chat__verzonden-bericht">OMG 😱</li>
   <li class="chat__tijd">18:42</li>
-  <li class="chat__user">user5:</li>
-  <li class="chat__verzonden-bericht">@User2 ook die van mij</li>
-  <li class="chat__tijd">18:42</li>
-  <li class="chat__user">user6:</li>
-  <li class="chat__verzonden-bericht">Wat een saaie DJ😴</li>
-  <li class="chat__tijd">18:42</li>
-  <li class="chat__user">user7:</li>
-  <li class="chat__verzonden-bericht">🔥🔥🔥🔥🔥🔥🔥🔥🔥</li>
-  <li class="chat__tijd">18:42</li>
   <li class="chat__user">user8:</li>
-  <li class="chat__verzonden-bericht">lekker bezig DJ</li>
+  <li class="chat__verzonden-bericht">@User3 ook die van mij</li>
   <li class="chat__tijd">18:42</li>
   <li class="chat__user">user9:</li>
-  <li class="chat__verzonden-bericht">😎😎😎😎😎😎</li>
+  <li class="chat__verzonden-bericht">Wat een saaie DJ😴</li>
   <li class="chat__tijd">18:42</li>
   <li class="chat__user">user10:</li>
+  <li class="chat__verzonden-bericht">🔥🔥🔥🔥🔥🔥🔥🔥🔥</li>
+  <li class="chat__tijd">18:42</li>
+  <li class="chat__user">user11:</li>
+  <li class="chat__verzonden-bericht">lekker bezig DJ</li>
+  <li class="chat__tijd">18:42</li>
+  <li class="chat__user">user12:</li>
+  <li class="chat__verzonden-bericht">😎😎😎😎😎😎</li>
+  <li class="chat__tijd">18:42</li>
+  <li class="chat__user">user13:</li>
   <li class="chat__verzonden-bericht">feestje💃🏾🕺🏾</li>
   <li class="chat__tijd">18:43</li>
-  <li class="chat__user">user11:</li>
+  <li class="chat__user">user14:</li>
   <li class="chat__verzonden-bericht">Skip...</li>
   <li class="chat__tijd">18:43</li>
-  <li class="chat__user">user12:</li>
-  <li class="chat__verzonden-bericht">Wild</li>
-  <li class="chat__tijd">18:43</li>
-  <li class="chat__user">user13:</li>
-  <li class="chat__verzonden-bericht">Booooooo....</li>
-  <li class="chat__tijd">18:43</li>
-  <li class="chat__user">user14:</li>
-  <li class="chat__verzonden-bericht">Welk liedje komt hierna ??</li>
-  <li class="chat__tijd">18:43</li>
   <li class="chat__user">user15:</li>
-  <li class="chat__verzonden-bericht">ziek!!!</li>
+  <li class="chat__verzonden-bericht">Ok...</li>
   <li class="chat__tijd">18:43</li>
   <li class="chat__user">user16:</li>
-  <li class="chat__verzonden-bericht">@User14 Runaway Train - Soul Asylum</li>
+  <li class="chat__verzonden-bericht">leuk</li>
   <li class="chat__tijd">18:43</li>
   <li class="chat__user">user17:</li>
-  <li class="chat__verzonden-bericht">@User14 Deze man is blind</li>
+  <li class="chat__verzonden-bericht">geweldige DJ</li>
+  <li class="chat__tijd">18:43</li>
+  <li class="chat__user">user18:</li>
+  <li class="chat__verzonden-bericht">Wild</li>
+  <li class="chat__tijd">18:43</li>
+  <li class="chat__user">user19:</li>
+  <li class="chat__verzonden-bericht">Amazing dutch DJ</li>
+  <li class="chat__tijd">18:43</li>
+  <li class="chat__user">user20:</li>
+  <li class="chat__verzonden-bericht">Booooooo....</li>
+  <li class="chat__tijd">18:43</li>
+  <li class="chat__user">user21:</li>
+  <li class="chat__verzonden-bericht">Welk liedje komt hierna ??</li>
+  <li class="chat__tijd">18:43</li>
+  <li class="chat__user">user22:</li>
+  <li class="chat__verzonden-bericht">ziek!!!</li>
+  <li class="chat__tijd">18:43</li>
+  <li class="chat__user">user23:</li>
+  <li class="chat__verzonden-bericht">@User21 Runaway Train - Soul Asylum</li>
+  <li class="chat__tijd">18:43</li>
+  <li class="chat__user">user24:</li>
+  <li class="chat__verzonden-bericht">@User21 Deze man is blind</li>
 </ul>
 <form id="chat___form" class="chat__form" aria-label="Send a message">
   <!-- <label for="chat__input" class="chat__label-hidden">Schrijf een bericht</label> -->
@@ -189,7 +204,7 @@
 
   button {
     position: absolute;
-    bottom: 5em;
+    bottom: 13.8em;
     left: 17em;
     background: none;
     border: none;

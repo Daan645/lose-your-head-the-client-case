@@ -60,7 +60,7 @@
   .chat {
     position: absolute;
     left: -500px;
-    height: 1000px;
+    height: 1290px;
     width: 312px;
     border-left: var(--tertairy) 1px solid;
     top: -360px;
