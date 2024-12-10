@@ -41,16 +41,17 @@
     flex-direction: row;
     gap: 1rem;
     padding: 5px;
-    width: 96vw;
+    width: 99vw;
     height: 70px;
     box-shadow: 7px 3px 25px 0px rgba(213 210 213);
     position: absolute;
-    bottom: -183px;
+    bottom: -132px;
     background-color: var(--light);
+    border-radius: 5px;
 
-    @media only screen and (min-width: 480px) {
-      /* bottom: 115px; */
-      width: calc(100% - 3%);
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+      /* bottom: -86px;
+      width: calc(100% - 1%); */
       /* margin-left: 1em; */
     }
 

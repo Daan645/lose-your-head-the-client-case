@@ -9,6 +9,7 @@
 </script>
 
 <main>
+  <!-- <Tabs /> -->
   <WeekSelectie class="weekselectie"></WeekSelectie>
   <Schedule class="schedule" {data}></Schedule>
   <Radioplayer class="radioplayer"></Radioplayer>

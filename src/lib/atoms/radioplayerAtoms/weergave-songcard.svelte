@@ -46,8 +46,7 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-
-    /* margin-bottom: 50px; */
+    margin-bottom: 20px;
   }
 
   .audio__artiesten-foto {
