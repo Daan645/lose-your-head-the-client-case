@@ -6,14 +6,6 @@ let menuVisible = false;
 
 function toggleMenu() {
     menuVisible = !menuVisible;
-
-  let men =  document.querySelectorAll('.sldie');
-
-  if (document.startViewTransition) {
-      document.startViewTransition(() => toggleActiveState(men));
-    } else {
-      toggleActiveState(men);
-    }
 }
 
 
