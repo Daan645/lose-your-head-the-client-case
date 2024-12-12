@@ -5,7 +5,13 @@
     export let data;
 </script>
 
-<main>
+<main class="" id="b">
     <WeekSelectie/>
     <Schedule {data}/> 
 </main>
+
+<style>
+    .active4{
+        opacity: 0;
+    }
+</style>

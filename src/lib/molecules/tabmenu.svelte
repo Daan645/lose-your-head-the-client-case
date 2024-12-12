@@ -6,16 +6,27 @@ let menuVisible = false;
 
 function toggleMenu() {
     menuVisible = !menuVisible;
+
+  let men =  document.querySelectorAll('.sldie');
+
+  if (document.startViewTransition) {
+      document.startViewTransition(() => toggleActiveState(men));
+    } else {
+      toggleActiveState(men);
+    }
 }
+
+
+
 </script>
 
 
 
-<ul>
+<ul class="menu">
     <li><Tabmenu_link label="home" /></li>
     <li><Tabmenu_link label="ontdek"/></li>
     <li><Tabmenu_link label="radio"/></li>
-    <li><Tabmenu_link label="meer" onclick={toggleMenu} href="#"/></li>
+    <li><Tabmenu_link label="meer" onclick={toggleMenu} href="#" id="view"/></li>
 </ul>
 
 <Slideinmenu {menuVisible}/>
@@ -35,4 +46,6 @@ function toggleMenu() {
         bottom: 0;
         z-index: 99;
     }
+
+    
 </style>
