@@ -125,6 +125,8 @@
         <div class="schedule__station-shows">
           {#each stationShows as show, i}
             <ProgramCard
+              showLogo={stationShows[0].mh_shows_id?.show?.radiostation?.logo
+                ?.id}
               programName={show.mh_shows_id?.show?.name || "Unknown Program"}
               time={getShowTime(show)}
               jdImgSrc={getImageSource(show).cover}

@@ -6,6 +6,5 @@
 </script>
 
 <main>
-  <WeekSelectie />
   <Schedule {data} />
 </main>

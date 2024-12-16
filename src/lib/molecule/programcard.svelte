@@ -2,6 +2,7 @@
   // General imports
   import { onMount } from "svelte";
   import Clock from "$lib/atoms/icon.svelte";
+  import ChristmasCard from "$lib/molecule/christmascard.svelte";
 
   // data import
   export let status = "";
@@ -9,6 +10,7 @@
   export let thumbnailImgSrc = "";
   export let programName = "Unnamed Program";
   export let description;
+  export let showLogo = "";
 
   export let time = "00:00 - 00:00";
   export let programLink = "";
@@ -40,6 +42,10 @@
     const popover = document.querySelector(`#popover-${programLink}`);
     const closePopoverButton = popover?.querySelector(".close");
 
+    const christmasPopoverButton = popover?.querySelector(
+      ".christmas-card-button",
+    );
+
     function togglePopover() {
       popover.togglePopover();
     }
@@ -63,6 +69,28 @@
         } else {
           togglePopover();
         }
+        e.preventDefault();
+      });
+
+      christmasPopoverButton.addEventListener("click", (e) => {
+        // find the button for christmas
+        const christmasCard = document.querySelector(
+          `#popover-${programLink}-card`,
+        );
+        console.log(christmasCard);
+
+        let doStuff = function () {
+          togglePopover();
+          christmasCard.togglePopover();
+        };
+
+        if (document.startViewTransition) {
+          console.log("startViewTransition close");
+          document.startViewTransition(doStuff);
+        } else {
+          doStuff();
+        }
+        console.log("startViewTransition showing");
         e.preventDefault();
       });
     }
@@ -186,13 +214,38 @@
           <span>{time}</span>
         </div>
       </div>
+
+      <input
+        type="button"
+        class="christmas-card-button"
+        popovertarget="popover-{programLink}-card"
+        value="Maak een kerstkaart"
+      />
     </article>
   </div>
 </div>
 
+<ChristmasCard {programLink} {programName} {showLogo} {thumbnailImgSrc} />
+
 <style>
   :root {
     --calc: calc(2rem - 1rem);
+  }
+
+  .christmas-card-button {
+    color: white;
+    margin-top: 2rem;
+    background-color: #1b2d53;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    cursor: pointer;
+    transition: 0.1s ease;
   }
 
   /* Popover */
@@ -225,7 +278,7 @@
       border-radius: 8px;
       box-shadow: 0px 8px 16px rgba(30, 30, 30, 0.08);
       min-height: 50vh;
-      width: 50vw;
+      width: 40rem;
       position: absolute;
       top: 50%;
       left: 50%;

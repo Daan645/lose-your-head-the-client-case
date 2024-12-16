@@ -5,8 +5,4 @@
   import Footer from "../lib/organism/Footer.svelte";
 </script>
 
-<Header />
-<Tabs />
-<Mobilenav />
 <slot></slot>
-<Footer />
