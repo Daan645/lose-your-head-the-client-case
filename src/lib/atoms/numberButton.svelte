@@ -45,7 +45,7 @@
     font-size: 1rem;
     margin: 0 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
+    z-index: 100;
     transition: 0.2s;
     cursor: pointer;
     animation: fadeIn 1s alternate ease-in-out forwards;
