@@ -25,14 +25,18 @@
 
 <style>
 
-
     li{
        border: none;
        border-radius: 16px 16px 0px 0px;
 
+
        &:nth-child(1){
             & .ball , .balltwo{
                 display: none;
+            }
+            & :active , :focus{
+                border-top: 0px solid white !important;
+                border-radius: 16px 16px 0px 0px;
             }
        }
 
@@ -67,7 +71,8 @@
             & .balltwo {
                 transform: translateX(900%);
             }
-       }
+        }
+       
        &:nth-child(6){
         & .ball {
                 transform: translateX(1100%);
@@ -88,21 +93,24 @@
         z-index: 1;
         width: 25px;
         height: 25px;
-        background-color: var(--primary-color);
+        background-image: linear-gradient( 135deg, #FFA8A8 10%, #FCFF00 100%);
         position: absolute;
         margin-top: 1em;
         border-radius: 60px;
+        
         }
         & .balltwo{
             width: 25px;
             height: 25px;
-            background-color: var(--secondary-color);
+            background-image: linear-gradient( 135deg, #FFD26F 10%, #3677FF 100%);
             position: absolute;
             margin-top: 2.5em;
             border-radius: 60px;
             z-index: 1;
         }
-    }
+}
+
+    
     a{
         display: flex;
         flex-direction: row;
@@ -110,6 +118,7 @@
         align-items: center;
         padding: 2em 2em;
         color: var(--light);
+        transition: ease-out 0.3s;
         
     }
 
@@ -129,8 +138,13 @@
         z-index: 2;
     }
 
-    a:hover ,  a:active , a:focus , li:hover , li:focus{
+    a:active , a:focus {
         color: var(--primary-color);
+        border-top: 10px solid white;
+        border-radius: 16px 16px 0px 0px;
+        transition: ease-out 0.3s;
+
+      
     }
 
     a:focus> svg{

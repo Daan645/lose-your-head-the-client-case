@@ -3,9 +3,10 @@
     import WeekSelectie from '../lib/molecules/WeekSelectie.svelte';
  
     export let data;
+
+  
 </script>
 
-<main>
-    <WeekSelectie/>
-    <Schedule {data}/> 
-</main>
+<main ></main>
+
+
