@@ -3,9 +3,12 @@
   export let sublabel =""
   export let href = "#"; // Changes the href
   export let title = ""; // Changes the alt text
+
 </script>
 
-<li>
+<li class="box">
+    <div class="ball"></div>
+    <div class="balltwo"></div>
     <a {title} {href}>
         <div>
             <span>
@@ -21,16 +24,92 @@
 
 
 <style>
+
+
     li{
-        border-bottom: 2px solid #EDEDED;
+       border: none;
+       border-radius: 16px 16px 0px 0px;
+
+       &:nth-child(1){
+            & .ball , .balltwo{
+                display: none;
+            }
+       }
+
+       &:nth-child(2){
+        & .ball {
+            display: none;
+            }
+            & .balltwo {
+                display: none;
+            }
+       }
+       &:nth-child(3){
+        & .ball {
+                transform: translateX(400%);
+            }
+            & .balltwo {
+                transform: translateX(400%);
+            }
+       }
+       &:nth-child(4){
+        & .ball {
+                transform: translateX(65000%);
+            }
+            & .balltwo {
+                transform: translateX(750%);
+            }
+       }
+       &:nth-child(5){
+        & .ball {
+                transform: translateX(700%);
+            }
+            & .balltwo {
+                transform: translateX(900%);
+            }
+       }
+       &:nth-child(6){
+        & .ball {
+                transform: translateX(1100%);
+            }
+            & .balltwo {
+                transform: translateX(1100%);
+            }
+       }
+       &:nth-child(7){
+            & .ball {
+                transform: translateX(1000%);
+            }
+            & .balltwo {
+                transform: translateX(1200%);
+            }
+       }
+       & .ball{
+        z-index: 1;
+        width: 25px;
+        height: 25px;
+        background-color: var(--primary-color);
+        position: absolute;
+        margin-top: 1em;
+        border-radius: 60px;
+        }
+        & .balltwo{
+            width: 25px;
+            height: 25px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            margin-top: 2.5em;
+            border-radius: 60px;
+            z-index: 1;
+        }
     }
     a{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 1em 1em;
-        color: var(--dark);
+        padding: 2em 2em;
+        color: var(--light);
         
     }
 
@@ -47,6 +126,7 @@
     a div span:nth-child(1){
         font-weight: 600;
         font-size: 1.1em;
+        z-index: 2;
     }
 
     a:hover ,  a:active , a:focus , li:hover , li:focus{
@@ -69,6 +149,9 @@
         transform: none;
     }
     } 
+    li span:nth-of-type(2) {
+        display: none; /* Hide the second span */
+    }
 
   /* toegankelijkheid Kleuren */
   @media (prefers-contrast: more) {

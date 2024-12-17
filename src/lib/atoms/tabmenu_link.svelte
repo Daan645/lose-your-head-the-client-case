@@ -30,8 +30,9 @@
         display: flex;
         flex-direction: column;
         gap: 0.5em;
+        background-color: var(--primary-color);
         align-items: center;
-        color: var(--grey);
+        color: var(--light);
         font-weight: 700;
         text-transform: uppercase;
         font-size: 3vw;
@@ -52,18 +53,18 @@
 
     a:focus, 
     a:active , a:hover {
-        color: var(--primary-color);
+        background-color: var(--secondary-color);
     }
 
     a:focus svg,
     a:active svg ,
     a:hover svg {
-        fill: var(--primary-color);
+        fill: var(--light);
     }
 
     a svg {
         width: 9vw;
-        fill: var(--grey);
+        fill: var(--light);
     }
 
     @media only screen and (min-width: 500px) {

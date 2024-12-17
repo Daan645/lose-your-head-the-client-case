@@ -12,15 +12,15 @@
   --p-text-size: 1em;
 
   /* colors */
-  --primary-color: #0091ff;
-  --secondary-color: #fe0070;
+  --primary-color: #890000;
+  --secondary-color: #FFAE00;
   --tertairy: #8b8b8b;
   --grey: #8b8b8b;
   --dark: #1e1e1e;
   --light: #ffff;
   --color-footer: #011564;
   --hover: #a11753;
-  --hover-secondary: #0e76c6;
+  --hover-secondary: #FFAE00;
 
 
   /* radius */
@@ -156,5 +156,5 @@ li {
 
 
 body {
-   background-color: #FAFAFA
+   background-color: rgb(36, 56, 63);
 }

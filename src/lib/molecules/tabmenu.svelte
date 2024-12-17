@@ -26,9 +26,9 @@ function toggleMenu() {
     }
     ul{
         border-top: 1px solid #EDEDED;
-        background-color: var(--light);
+        background-color: var(--primary-color);
         width: 100%;
-        padding: 1em 0em;
+        padding: 0em 0em;
         display: flex;
         width: 100%;
         position: absolute;
