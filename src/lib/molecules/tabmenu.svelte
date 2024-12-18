@@ -6,6 +6,14 @@ let menuVisible = false;
 
 function toggleMenu() {
     menuVisible = !menuVisible;
+
+        let filepath='goofyahh.mp3'; //example
+        let audio = new Audio();   
+        audio.src = filepath;
+        audio.controls = true;
+        audio.autoplay = true;
+  
+
 }
 </script>
 

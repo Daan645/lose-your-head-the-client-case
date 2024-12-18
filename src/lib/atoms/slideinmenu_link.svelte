@@ -4,12 +4,22 @@
   export let href = "#"; // Changes the href
   export let title = ""; // Changes the alt text
 
+  
+
+    function sound() {
+        let filepath='effect.mp3'; //example
+        let audio = new Audio();   
+        audio.src = filepath;
+        audio.controls = true;
+        audio.autoplay = true;
+    }
+    
 </script>
 
 <li class="box">
     <div class="ball"></div>
     <div class="balltwo"></div>
-    <a {title} {href}>
+    <a {title} {href} on:click={sound}>
         <div>
             <span>
                 {label}

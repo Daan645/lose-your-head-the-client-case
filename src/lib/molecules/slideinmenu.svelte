@@ -11,6 +11,8 @@
         runAnimation();
     }
 
+    
+
     function runAnimation() {
 
         const menu = document.querySelectorAll(".menu");
