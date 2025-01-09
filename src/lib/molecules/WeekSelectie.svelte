@@ -1,4 +1,11 @@
 <script>
+  import { onMount } from "svelte";
+
+  
+let counter = 0; // Gebruik let of var
+
+
+   
   // maak een functie die het jaar en maand meeneemt
   const loadMonthDays = (year, month) => {
     // Maak een array met daarin de weekdagen
@@ -59,6 +66,16 @@
   // Scroll funcies
   const scrollLeft = () => carousel?.scrollBy({ left: -200, behavior: "smooth" });
   const scrollRight = () => carousel?.scrollBy({ left: 200, behavior: "smooth" });
+
+  let scrollLocation = currentDayNumber * 50;
+  
+  const scrollToCurrentDay = () => carousel?.scrollBy({ left: scrollLocation })
+
+  onMount(() => {
+  scrollToCurrentDay();
+});
+
+
 </script>
 
 <!-- HTML -->
@@ -88,7 +105,7 @@
   <ol bind:this={carousel}>
     <!-- Ga de daysinmonth array af en geef de uitkomsten weer als dayofweek en day -->
     {#each daysInMonth as { dayOfWeek, day }}
-    <li >
+    <li>
         <!-- als de dag gelijk is aan de nummer van de huidige dag krijgt de button de active class -->
         <button class:button-active={day === currentDayNumber} class:new-week={dayOfWeek === "zondag"}>
           <!-- Weergeef de dag in een string-->
@@ -140,16 +157,13 @@
  .day-carousel {
     position: relative;
     display: flex;
-    width: 60vw;
+    width: 80vw;
     overflow: hidden; /* Verberg inhoud die buiten het zicht valt */
     /* margin-left: calc(2rem + 105px); */
     @media screen and (min-width: 960px) {
       font-size: 1.5em;
     }
-    @media screen and (min-width: 500px) {
-    width: 50vw;
-    
-    }
+ 
   }
 
   ol {
