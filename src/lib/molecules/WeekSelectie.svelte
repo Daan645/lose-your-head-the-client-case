@@ -67,13 +67,24 @@ let counter = 0; // Gebruik let of var
   const scrollLeft = () => carousel?.scrollBy({ left: -200, behavior: "smooth" });
   const scrollRight = () => carousel?.scrollBy({ left: 200, behavior: "smooth" });
 
-  let scrollLocation = currentDayNumber * 50;
+  // let scrollLocation = currentDayNumber * 50;
   
-  const scrollToCurrentDay = () => carousel?.scrollBy({ left: scrollLocation })
+  // const scrollToCurrentDay = () => carousel?.scrollBy({ left: scrollLocation })
 
   onMount(() => {
-  scrollToCurrentDay();
+  // scrollToCurrentDay();
+  let buttonSize = dayOfWeekButton?.getBoundingClientRect().width;
+  console.log(buttonSize);
+
 });
+
+
+
+let dayOfWeekButton;
+
+
+// const rect = element.getBoundingClientRect();
+// console.log(rect.top, rect.left, rect.width, rect.height);
 
 
 </script>
@@ -107,7 +118,7 @@ let counter = 0; // Gebruik let of var
     {#each daysInMonth as { dayOfWeek, day }}
     <li>
         <!-- als de dag gelijk is aan de nummer van de huidige dag krijgt de button de active class -->
-        <button class:button-active={day === currentDayNumber} class:new-week={dayOfWeek === "zondag"}>
+        <button bind:this={dayOfWeekButton} class:button-active={day === currentDayNumber} class:new-week={dayOfWeek === "zondag"}>
           <!-- Weergeef de dag in een string-->
           <span>{dayOfWeek}</span>
           <!-- Weergeef de dag als een nummer -->
