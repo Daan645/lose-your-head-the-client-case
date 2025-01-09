@@ -5,7 +5,7 @@
             <ul class="audio__list">
                 <li class="audio__link"><a href="/">LIVE</a></li>
                 <li class="audio__link"><a href="/">STATIONS</a></li>
-                <li><a href="/"><img  width="93" class="audio__list-link" alt="pop out" src="/Pop-out.svg"></a></li>
+                <li><a href="/" aria-label="Pop out"><img  width="93" class="audio__list-link" alt="pop out" src="/Pop-out.svg"></a></li>
             </ul>
 
             <span class="audio__line"></span>
@@ -22,23 +22,23 @@
 
             <ul class="audio__group">
                 <li>
-                <a href="/" class="audio__kijk-live">
+                <a href="/" aria-label="Kijk live" class="audio__kijk-live">
                     <img  width="93" class="audio__group-live" id="audio__live-btn" alt="kijk live button" src="/live-icon.svg">
                     <p>Kijk live</p>
                 </a>
                 </li>
                 <li>
-                    <a href="/">
+                    <a href="/" aria-label="Casting">
                         <img  width="93" class="audio__group-cast" id="audio__cast-btn" alt="casting button" src="/Casting.svg">
                     </a>
                 </li>
                 <li>
-                    <a href="/">
+                    <a href="/" aria-label="Play button">
                         <img  width="93" class="audio__group-play" id="audio__play-btn" alt="play button" src="/play-button.svg">
                     </a>
                 </li>
                 <li>
-                <a href="/" class="audio__whats-app">
+                <a href="/" aria-label="whats app" class="audio__whats-app">
                     <img  width="93" class="audio__group-whatsapp" id="audio__app-btn" alt="whats app button" src="/Whatsapp-Icon-Link.svg">
                     <p>App studio</p>
                 </a>
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="audio__lijst">
-                        <a class="audio__lijst-link" href="/">
+                        <a href="/" class="audio__lijst-link"  aria-label="volledige lijst">
                             Volledige lijst<img class="audio__pijl" width="93" src="/pijl.svg" alt="pijl icoon volgende lijst">
                         </a>
                     </div>
