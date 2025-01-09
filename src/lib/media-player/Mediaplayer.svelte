@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-    // Hier word de audio file geimporteerd
+    // Variabele om de audio file te gebruiken
     let audio;
     // Variable om bij te houden of de audio file wordt afgespeeld
     let isPlaying = false;
