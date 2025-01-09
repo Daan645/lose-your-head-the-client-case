@@ -330,6 +330,11 @@
         transition: 0.2s ease-in;
     }
 
+    .audio__link:focus {
+        color: var(--secondary-color);
+        border-bottom: solid 0.2rem var(--secondary-color);
+    }
+
     /* Volgende */
     .audio__volgende {
     @media only screen and (min-width: 320px) and (max-width: 980px){
