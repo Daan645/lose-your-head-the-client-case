@@ -110,7 +110,7 @@
         box-shadow: 7px 3px 25px 0px rgba(213 210 213);
         border-radius: 5px;
         position: absolute;
-        bottom: 110px;
+        bottom: 125px;
 
         @media only screen and (min-width: 600px) and (max-width: 980px){
             width: 98vw;
