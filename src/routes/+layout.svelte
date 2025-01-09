@@ -5,8 +5,8 @@
     import Mediaplayer from "../lib/media-player/Mediaplayer.svelte";
 </script>
 
-<Header/>
+<!-- <Header/> -->
 <Mobilenav/>
 <Mediaplayer />
-<Footer/>  
+<!-- <Footer/>   -->
 <slot></slot>

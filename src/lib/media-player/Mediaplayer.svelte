@@ -1,78 +1,95 @@
-<section class="audio" aria-label="Audio Player">
+<div class="audio">
     <div class="audio__container">
-        <section class="audio__player">
+        <div class="audio__player">
             <!-- navigation media player-->
             <ul class="audio__list">
                 <li class="audio__link"><a href="/">LIVE</a></li>
                 <li class="audio__link"><a href="/">STATIONS</a></li>
-                <li><img  width="93px" class="audio__list-link" alt="pop out" src="/Pop-out.svg"></li>
+                <li><a href="/"><img  width="93" class="audio__list-link" alt="pop out" src="/Pop-out.svg"></a></li>
             </ul>
 
             <span class="audio__line"></span>
 
             <figure class="audio__figure">
-                <img class="audio__amy" width="93px" alt="foto Amy whine house" src="/amy-whine-house.png">
-                <p class="audio__dj-text"><img class="audio__dj" width="93px" alt="foto dj icoon" src="/DJ.svg"> Sander Hoogendorn</p>
+                <img class="audio__amy" width="93" alt="foto Amy whine house" src="/amy-whine-house.png">
+                <p class="audio__dj-text"><img class="audio__dj" width="93" alt="foto dj icoon" src="/DJ.svg"> Sander Hoogendorn</p>
             </figure>
 
             <article class="audio__text">
                 <h2>Goud van oud</h2>
-                <p class="audio__omschrijving"><img width="93px" class="audio__klok" alt="tijd icoon" src="/Time.svg"> Back To Black - Amy Winehouse</p>
+                <p class="audio__omschrijving"><img width="93" class="audio__klok" alt="tijd icoon" src="/Time.svg"> Back To Black - Amy Winehouse</p>
             </article>
 
             <ul class="audio__group">
-                <ul class="audio__kijk-live">
-                    <img  width="93px" class="audio__group-live" id="audio__play-btn" alt="kijk live button" src="/live-icon.svg">
-                    <li>Kijk live</li>
-                </ul>
-                <li><img  width="93px" class="audio__group-cast" id="audio__play-btn" alt="casting button" src="/Casting.svg"></li>
-                <li><img  width="93px" class="audio__group-play" id="audio__play-btn" alt="play button" src="/play-button.svg"></li>
-                <ul class="audio__whats-app">
-                    <img  width="93px" class="audio__group-whatsapp" id="audio__play-btn" alt="whats app button" src="/Whatsapp-Icon-Link.svg">
-                    <li>App studio</li>
-                </ul>
+                <li>
+                <a href="/" class="audio__kijk-live">
+                    <img  width="93" class="audio__group-live" id="audio__live-btn" alt="kijk live button" src="/live-icon.svg">
+                    <p>Kijk live</p>
+                </a>
+                </li>
+                <li>
+                    <a href="/">
+                        <img  width="93" class="audio__group-cast" id="audio__cast-btn" alt="casting button" src="/Casting.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="/">
+                        <img  width="93" class="audio__group-play" id="audio__play-btn" alt="play button" src="/play-button.svg">
+                    </a>
+                </li>
+                <li>
+                <a href="/" class="audio__whats-app">
+                    <img  width="93" class="audio__group-whatsapp" id="audio__app-btn" alt="whats app button" src="/Whatsapp-Icon-Link.svg">
+                    <p>App studio</p>
+                </a>
+                </li>
             </ul>
 
-            <section class="audio__volgende">
+            <div class="audio__volgende">
                 <article class="audio__overzicht">
                     <h2 class="audio__overzicht-header">Eerder op radio Veronica</h2>
                     <div class="audio__artiesten-container">
                     <article class="audio__tijd">
                         <h3 class="audio-tijd-header">Nu</h3>
                         <span class="audio__volgende-lijn"></span>
-                        <p>16:45</p>
+                        <p class="audio__tijd-digitaal">16:45</p>
                         <span class="audio__volgende-lijn"></span>
                     </article>
-                        <section class="audio__artiesten-wachtrij">
+                        <div class="audio__artiesten-wachtrij">
                             <article>
-                                <img class="audio__artiesten-foto" width="93px" src="/amy-whine-house.png" alt="foto album amy winehouse">
+                                <img class="audio__artiesten-foto" width="93" src="/amy-whine-house.png" alt="foto album amy winehouse">
                                 <h2 class="audio__foto-header">Back to black</h2>
                                 <p>Amy winhouse</p>
-                                <hr>
+                                <span></span>
                             </article>
                             <article>
-                                <img class="audio__artiesten-foto" width="93px" src="/Soul-asylum.png" alt="foto aulbum soul asylum">
+                                <img class="audio__artiesten-foto" width="93" src="/Soul-asylum.png" alt="foto aulbum soul asylum">
                                 <h2 class="audio__foto-header">Run away train</h2>
                                 <p>Soul Asylum</p>
-                                <hr>
+                                <span></span>
                             </article>
-                        </section>
+                        </div>
                     </div>
-                    <article class="audio__lijst">
+                    <div class="audio__lijst">
                         <a class="audio__lijst-link" href="/">
-                            Volledige lijst<img class="audio__pijl" width="93px" src="/pijl.svg" alt="pijl icoon volgende lijst">
+                            Volledige lijst<img class="audio__pijl" width="93" src="/pijl.svg" alt="pijl icoon volgende lijst">
                         </a>
-                    </article>
+                    </div>
                 </article>
-        </section>
+            </div>
+        </div>
     </div>
-</section>
+</div>
 
 <audio id="audio" src="your-audio-file.mp3"></audio>
 
 <style>
     .audio {
         width: 100%;
+    }
+
+    p  {
+        color: var(--grey);
     }
 
     .audio__container {
@@ -101,7 +118,7 @@
 
         @media only screen and (min-width: 982px) {
             position: unset;
-            height: 900px;
+            height: 100%;
             width: 312px ;
             display: flex;
             flex-direction: column;
@@ -129,6 +146,8 @@
         @media only screen and (min-width: 982px) {
             align-items: center;
             gap: 0.8rem;
+            margin-bottom: 20px;
+
         }
     }
   
@@ -164,13 +183,14 @@
 
         @media only screen and (min-width: 982px) {
             align-items: unset;
+            margin-left: unset;
+            margin-bottom: 180px;
         }
-
     }
 
     .audio__group-cast {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1.25rem;
+        height: 1.25rem;
 
         @media only screen and (min-width: 982px) {
             display: none;
@@ -191,6 +211,7 @@
     .audio__list {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         gap: 2rem;
         overflow: auto;
         font-family: "BrutalType";
@@ -237,7 +258,7 @@
 
 
         @media only screen and (min-width: 982px) {
-            width: 100%;
+            width: 312px;
             height: 2px;
             background-color: var(--grey);
         }
@@ -259,16 +280,22 @@
             width: 1.5rem;
             margin-left: auto;
         }
+        outline: none;
+    }
+
+    .audio__list-link:focus {
+        outline: 2px solid var(--grey);
+        outline-offset: 2px;
     }
 
     .audio__group-live {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 1.25rem;
+        height: 1.25rem;
     }
 
     .audio__group-whatsapp {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 1.25rem;
+        height: 1.25rem;
     }
 
     .audio__kijk-live {
@@ -280,7 +307,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-
+            gap: 0.2rem;
         }
     }
 
@@ -293,6 +320,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 0.2rem;
         }
     }
 
@@ -314,6 +342,7 @@
         width: 20px;
         gap: 1.5rem;
         margin-right: auto;
+        position: relative;
         }
     }
 
@@ -322,7 +351,7 @@
             padding: 0.2rem;
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
         }
     }
 
@@ -347,32 +376,100 @@
 
     .audio-tijd-header {
         color: var(--secondary-color);
+        position: absolute;
+        top: 2.5em;
+        left: 0.7em;
     }
 
     .audio__volgende-lijn {
         border-left: 2px dashed var(--grey);
-        width: 80px;
-        height: 130px;
+        width: 32px;
+        height: 64px;
+        margin-bottom: 1em;
         display: inline-block;
+        margin:  20px 0px 0px 20px;
+    }
+
+    .audio__tijd-digitaal {
+        position: absolute;
+        top: 9em;
+        left: 0.5em;
     }
 
     .audio__artiesten-wachtrij {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1.5em;
+    }
+
+    .audio__artiesten-wachtrij article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
     }
 
     .audio__artiesten-foto {
         width: 80px;
         height: 80px;
+
+        @media only screen and (min-width:982px) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .audio__artiesten-wachtrij article:nth-child(1) .audio__artiesten-foto {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    .audio__artiesten-wachtrij article:nth-child(2) .audio__artiesten-foto {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
     }
 
     .audio__foto-header {
-    width: 170px;
+        width: 170px;
     }
+
+    .audio__artiesten-wachtrij article:nth-child(1) .audio__foto-header {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .audio__artiesten-wachtrij article:nth-child(2) .audio__foto-header {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }         
 
     .audio__artiesten-wachtrij p {
         padding-bottom: 1rem;
+    }
+
+    .audio__artiesten-wachtrij article:nth-child(1) p {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .audio__artiesten-wachtrij article:nth-child(2) p {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .audio__artiesten-wachtrij article:nth-child(1) span {
+        display: inline-block;
+        background-color: var(--grey);
+        height: 1px;
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .audio__artiesten-wachtrij article:nth-child(2) span {
+        display: inline-block;
+        background-color: var(--grey);
+        height: 1px;
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
     }
 
     .audio__lijst-link {
