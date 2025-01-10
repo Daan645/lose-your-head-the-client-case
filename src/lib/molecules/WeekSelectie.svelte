@@ -1,10 +1,5 @@
 <script>
   import { onMount } from "svelte";
-
-  
-let counter = 0; // Gebruik let of var
-
-
    
   // maak een functie die het jaar en maand meeneemt
   const loadMonthDays = (year, month) => {
@@ -69,22 +64,30 @@ let counter = 0; // Gebruik let of var
 
   // let scrollLocation = currentDayNumber * 50;
   
-  // const scrollToCurrentDay = () => carousel?.scrollBy({ left: scrollLocation })
 
+  let dayOfWeekButton;
+ 
+// Wait untill the DOM content is loaded. And excecute all functions on load.
   onMount(() => {
-  // scrollToCurrentDay();
-  let buttonSize = dayOfWeekButton?.getBoundingClientRect().width;
-  console.log(buttonSize);
+    // Calculate how many width in pixels 1 button has (I use getBounding because the values will depent on the screen resolution)
+    let buttonSize = dayOfWeekButton?.getBoundingClientRect().width;
+    // Calculate how var you have to scroll, to reach te beginning of the button I multiply the size of the button in px with the curent number of the day (the number of buttons) and I subtract the size of one button from the outcome, otherwise you will reach the end of the button instead of the beginning. 
+    let scrollLocation =  buttonSize * currentDayNumber - buttonSize;
+// Scroll to the left with smooth behavior, use the value of scroll location
+    const scrollToCurrentDay = () => carousel?.scrollBy({ left: scrollLocation, behavior: "smooth" })
+// Excecute the function
+  scrollToCurrentDay();
 
+console.log("Current scroll location is:" + scrollLocation)
+console.log("current button size is:" + buttonSize)
+console.log("current day is" + currentDayNumber)
 });
 
 
 
-let dayOfWeekButton;
 
 
-// const rect = element.getBoundingClientRect();
-// console.log(rect.top, rect.left, rect.width, rect.height);
+
 
 
 </script>
@@ -116,9 +119,9 @@ let dayOfWeekButton;
   <ol bind:this={carousel}>
     <!-- Ga de daysinmonth array af en geef de uitkomsten weer als dayofweek en day -->
     {#each daysInMonth as { dayOfWeek, day }}
-    <li>
+    <li bind:this={dayOfWeekButton} class="day-of-week-button">
         <!-- als de dag gelijk is aan de nummer van de huidige dag krijgt de button de active class -->
-        <button bind:this={dayOfWeekButton} class:button-active={day === currentDayNumber} class:new-week={dayOfWeek === "zondag"}>
+        <button class:button-active={day === currentDayNumber} class:new-week={dayOfWeek === "zondag"}>
           <!-- Weergeef de dag in een string-->
           <span>{dayOfWeek}</span>
           <!-- Weergeef de dag als een nummer -->
@@ -168,8 +171,8 @@ let dayOfWeekButton;
  .day-carousel {
     position: relative;
     display: flex;
-    width: 80vw;
-    overflow: hidden; /* Verberg inhoud die buiten het zicht valt */
+    width: 80%;
+    overflow-x: auto; /* Verberg inhoud die buiten het zicht valt */
     /* margin-left: calc(2rem + 105px); */
     @media screen and (min-width: 960px) {
       font-size: 1.5em;
@@ -191,6 +194,21 @@ let dayOfWeekButton;
     position: relative;
     z-index: 2; /* Zorg dat de knoppen boven de blur-elementen staan */
   }
+
+  span {
+    width: 4em;
+  }
+
+  .day-of-week-button,
+  .day-of-week-button span,
+  .day-of-week-button button,
+  .day-of-week-button button span  {
+    margin: 0;
+  }
+
+
+   
+  
 
   .day-carousel::before,
   .day-carousel::after {
@@ -230,7 +248,7 @@ let dayOfWeekButton;
     outline: none;
     background-color: rgb(239, 239, 239);
     font-family: var(--font-family);
-    padding: 1em;
+    padding: 1em 0 1em 0;
     font-size: 0.9em;
     cursor: pointer;
     font-weight: bold;
@@ -247,6 +265,8 @@ let dayOfWeekButton;
   .button-active span:first-of-type {
     color: var(--light);
   }
+
+
 
   li  button:hover,
   li button:focus
@@ -297,10 +317,10 @@ font-size: 0.8em;
   }
 
   .new-week {
-    border-right: solid 8px var(--secondary-color);
+    /* border-right: solid 8px var(--secondary-color); */
 
     @media screen and (min-width: 960px) {
-      border-right: solid 10px var(--secondary-color);
+      /* border-right: solid 10px var(--secondary-color); */
 
     }
   }
