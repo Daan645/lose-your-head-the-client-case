@@ -125,8 +125,6 @@
     </div>
 </div>
 
-<audio id="audio" src="your-audio-file.mp3"></audio>
-
 <style>
     .audio {
         width: 100%;
@@ -267,11 +265,9 @@
         flex-direction: row;
         justify-content: center;
         gap: 2rem;
-        overflow: auto;
         font-family: "BrutalType";
         font-weight: 900;
         align-items: center;
-        overflow: hidden;
         width: 100%;
 
 
@@ -334,12 +330,6 @@
             width: 1.5rem;
             margin-left: auto;
         }
-        outline: none;
-    }
-
-    .audio__list-link:focus {
-        outline: 2px solid var(--grey);
-        outline-offset: 2px;
     }
 
     .audio__group-live {
@@ -384,7 +374,7 @@
         transition: 0.2s ease-in;
     }
 
-    .audio__link:focus {
+    .audio__link:active{
         color: var(--secondary-color);
         border-bottom: solid 0.2rem var(--secondary-color);
     }
