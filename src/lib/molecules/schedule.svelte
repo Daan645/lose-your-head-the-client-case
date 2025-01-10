@@ -30,6 +30,7 @@
 
     // Als de cover niet bestaat of er geen users zijn, gebruik dan de thumbnail van de show
     // Als er geen thumbnail of cover is gebruik een lege string
+
     return {
       cover: firstUser ? `/${firstUser}` : thumbnail ? `/${thumbnail}` : "",
       thumbnail: thumbnail ? `/${thumbnail}` : "",
