@@ -88,23 +88,19 @@
       <!-- Ga de daysinmonth array af en geef de uitkomsten weer als dayofweek en day -->
       {#each daysInMonth as { dayOfWeek, day }}
         <li>
-          <form method="POST" action="/">
-            <!-- als de dag gelijk is aan de nummer van de huidige dag krijgt de button de active class -->
-            <button
-              type="submit"
-              href="/?datum=#{year}-{month + 1}-{day}"
-              class:button-active={day === currentDayNumber}
-              class:new-week={dayOfWeek === "zondag"}
-              class="day-button"
-              formaction="/"
-            >
-              <input hidden name="datum" value="{year}-{month + 1}-{day}" />
-              <!-- Weergeef de dag in een string-->
-              <span>{dayOfWeek}</span>
-              <!-- Weergeef de dag als een nummer -->
-              <span>{day}</span>
-            </button>
-          </form>
+          <!-- als de dag gelijk is aan de nummer van de huidige dag krijgt de button de active class -->
+          <a
+            data-sveltekit-reload
+            href="/?datum={year}-{month + 1}-{day}"
+            class:button-active={day === currentDayNumber}
+            class:new-week={dayOfWeek === "zondag"}
+            class="day-button"
+          >
+            <!-- Weergeef de dag in een string-->
+            <span>{dayOfWeek}</span>
+            <!-- Weergeef de dag als een nummer -->
+            <span>{day}</span>
+          </a>
         </li>
       {/each}
     </ol>

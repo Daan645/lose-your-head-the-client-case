@@ -6,6 +6,7 @@
   import Radioplayer from "../lib/organism/Radioplayer.svelte";
 
   export let data;
+  console.log("Nieuwe data: ", data);
 </script>
 
 <main>
@@ -17,7 +18,6 @@
 </main>
 
 <style>
-
   :global(section:has(.navigation-buttons)) {
     grid-area: weekselectie;
   }
@@ -41,7 +41,7 @@
         "radioplayer weekselectie"
         "radioplayer schedule"
         "radioplayer footer";
-        overflow-x: hidden;
+      overflow-x: hidden;
     }
   }
 </style>
