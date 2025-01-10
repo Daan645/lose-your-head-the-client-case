@@ -9,7 +9,6 @@
   export let thumbnailImgSrc = "";
   export let programName = "Unnamed Program";
   export let description;
-  export let showLogo = "";
 
   export let time = "00:00 - 00:00";
   export let programLink = "";

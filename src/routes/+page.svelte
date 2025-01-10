@@ -6,7 +6,6 @@
   import Radioplayer from "../lib/organism/Radioplayer.svelte";
 
   export let data;
-  console.log("Nieuwe data: ", data);
 </script>
 
 <main>
