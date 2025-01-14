@@ -41,10 +41,10 @@
 
 <div>
 
-    <form action="https://fdnd-agency.directus.app/items/mh_logs" method="POST" class="error-form" on:submit={send}>
+    <form action="https://fdnd-agency.directus.app/items/mh_logs" method="POST" class="errorform" on:submit={send}>
         <label for="textfield">Wat ging er mis?</label>
         <textarea id="textfield" spellcheck="true"  placeholder="Vertel wat u deed voor deze error" bind:value={message} required></textarea>
-        <button class="form-button" type="submit" aria-label="Verstuur uw bericht" disabled={isSubmitting}>{buttonText}</button>
+        <button class="errorform__button" type="submit" aria-label="Verstuur uw bericht" disabled={isSubmitting}>{buttonText}</button>
     </form>
 
     <p>Alle velden gemarkeerd als vereist moeten worden voltooid</p>
@@ -52,7 +52,7 @@
 </div>
 
 <style>
-    form {
+    .errorform {
         padding: 2em 0em;
         display: flex;
         flex-direction: column;
@@ -60,13 +60,13 @@
         gap: 1em;
     }
 
-    form label {
+    .errorform label {
         font-size: 1.5em;
         font-family: var(--font-family);
         font-weight: 600;
     }
 
-    form textarea {
+    .errorform textarea {
         width: 100%;
         min-height: 200px;
         padding: 1.5em;
@@ -76,11 +76,11 @@
         font-size: 1.1em;
     }
 
-    form textarea::placeholder {
+    .errorform textarea::placeholder {
         color: var(--dark);
     }
 
-    form button {
+    .errorform .errorform__button {
         border-radius: 0.5em;
         font-size: 1.1em;
         font-weight: bold;
@@ -105,14 +105,14 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-        form button {
+        .errorform .errorform__button {
             transition: none;
             transform: none;
         }
     } 
 
     @media (prefers-contrast: more) {
-        form button {
+        .errorform .errorform__button {
             background-color: var(--dark);
         }
     }
