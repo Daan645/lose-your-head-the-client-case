@@ -1,0 +1,1 @@
+<li><a href="/" aria-label="Pop out"><img width="93" class="audio__list-link" alt="pop out" src="/Pop-out.svg"></a></li>
