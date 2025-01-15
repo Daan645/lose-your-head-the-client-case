@@ -10,6 +10,7 @@
 
   // data import
   export let data;
+  console.log(data)
   // let { data } = $props();
 
   function getImageSource(show) {

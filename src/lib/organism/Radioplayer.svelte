@@ -11,7 +11,7 @@
   import Weergavelijst from "../molecules/radioplayerMolecules/Weergave-lijst.svelte";
 </script>
 
-<article class="audio">
+<article class="radioplayer audio">
   <Radiotab />
   <Musicimage />
   <ul class="audio__group">

@@ -1,12 +1,13 @@
-<script>    import Header from "../lib/header/Header.svelte";
-    import Mobilenav from "../lib/mobile-nav/Mobilenav.svelte";
-    import Footer from '../lib/footer/Footer.svelte';
-    import Mediaplayer from "../lib/media-player/Mediaplayer.svelte";
+<script>    
+    import Header from "../lib/organism/Header.svelte";
+    import Mobilenav from "../lib/organism/Mobilenav.svelte";
+    
 </script>
 
-<!-- <Header/> -->
-<Mobilenav/>
-<Mediaplayer />
-<!-- <Footer/>   -->
-
+<Header/>
 <slot></slot>
+<Mobilenav/>
+
+
+
+

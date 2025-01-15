@@ -19,7 +19,7 @@
         font-family: "BrutalType";
         font-weight: 900;
         @media only screen and (min-width: 960px) {
-           justify-content: center; 
+           justify-content: start; 
         }
     }
 

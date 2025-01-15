@@ -57,14 +57,18 @@
       {#each daysInMonth as { dayOfWeek, day }}
         <li bind:this={dayOfWeekButton} class="day-of-week-button">
           <!-- als de dag gelijk is aan de nummer van de huidige dag krijgt de button de active class -->
-          <button
-            class="day-buttons"
+           <a
+            data-sveltekit-reload
+            href="/?datum={year}-{month + 1}-{day}"
             class:button-active={day === currentDayNumber}
-            class:new-week={dayOfWeek === "zondag"}>
+            class:new-week={dayOfWeek === "zondag"}
+            class="day-button"
+          >
+            <!-- Weergeef de dag in een string-->
             <span>{dayOfWeek}</span>
             <!-- Weergeef de dag als een nummer -->
             <span>{day}</span>
-          </button>
+          </a>
         </li>
       {/each}
     </ol>
@@ -114,6 +118,7 @@
     }
   }
 
+  
   ol {
     display: flex;
     overflow-x: scroll;
@@ -127,17 +132,6 @@
   button.navigation-buttons {
     position: relative;
     z-index: 2; /* Zorg dat de knoppen boven de blur-elementen staan */
-  }
-
-  span {
-    width: 4em;
-  }
-
-  .day-of-week-button,
-  .day-of-week-button span,
-  .day-of-week-button button,
-  .day-of-week-button button span {
-    margin: 0;
   }
 
   .day-carousel::before,
@@ -169,7 +163,7 @@
     ); /* Rechter blur */
   }
 
-  button,
+  a,
   .day-button {
     display: flex;
     flex-direction: column;
@@ -179,7 +173,8 @@
     outline: none;
     background-color: rgb(239, 239, 239);
     font-family: var(--font-family);
-    padding: 1em 0 1em 0;
+    color: var(--dark);
+    padding: 1em;
     font-size: 0.9em;
     cursor: pointer;
     font-weight: bold;
@@ -187,31 +182,12 @@
       transition: 0.2s ease-in;
     }
   }
-  .day-buttons {
-    border-right: solid 8px rgb(239, 239, 239);
-    border-left: solid 8px rgb(239, 239, 239);
-    @media screen and (min-width: 960px) {
-      border-right: solid 10px rgb(239, 239, 239);
-      border-right: solid 10px rgb(239, 239, 239);
-    }
-  }
+
   .button-active {
     background-color: var(--secondary-color);
     color: var(--light);
-    border-right: solid 8px var(--secondary-color);
-    border-left: solid 8px var(--secondary-color);
-    @media screen and (min-width: 960px) {
-      border-right: solid 10px var(--secondary-color);
-      border-right: solid 10px var(--secondary-color);
-    }
-  }
-
-  .button-active:hover {
-    border-right: solid 8px var(--secondary-color);
-    border-left: solid 8px var(--primary-color);
-    @media screen and (min-width: 960px) {
-      border-right: solid 10px var(--primary-color);
-      border-left: solid 10px var(--primary-color);
+    & span{
+      color: var(--light);
     }
   }
 
@@ -219,38 +195,11 @@
     color: var(--light);
   }
 
-  .new-week {
-    border-right: solid 8px var(--secondary-color);
-    border-left: solid 8px rgb(239, 239, 239);
-
-    @media screen and (min-width: 960px) {
-      border-right: solid 10px var(--secondary-color);
-      border-left: solid 10px rgb(239, 239, 239);
-    }
-  }
-
-  .new-week:hover {
-    border-right: solid 8px var(--secondary-color);
-    border-left: solid 8px var(--primary-color);
-    
-    @media screen and (min-width: 960px) {
-      border-right: solid 10px var(--secondary-color);
-      border-left: solid 10px var(--primary-color);
-    }
-  }
-
-
-  li button:hover,
-  li button:focus {
+  li .day-button:hover,
+  li .day-button:focus {
     background-color: var(--primary-color);
     color: var(--light);
     border-radius: 15px;
-    border-right: solid 8px var(--primary-color);
-    border-left: solid 8px var(--primary-color);
-    @media screen and (min-width: 960px) {
-      border-right: solid 10px var(--primary-color);
-      border-left: solid 10px var(--primary-color);
-    }
     @media (prefers-reduced-motion: no-preference) {
       scale: 0.9;
     }
@@ -261,11 +210,9 @@
     color: var(--light);
   }
 
-  button span:first-of-type {
-    color: #5d5d5d;
-    font-size: 0.8em;
-  }
-  button span:nth-of-type(2) {
+
+
+  .day-button span:nth-of-type(2) {
     font-size: 1.5em;
   }
 
@@ -292,4 +239,11 @@
     border-bottom-right-radius: 7px;
   }
 
+  .new-week {
+    border-right: solid 8px var(--secondary-color);
+
+    @media screen and (min-width: 960px) {
+      border-right: solid 10px var(--secondary-color);
+    }
+  }
 </style>

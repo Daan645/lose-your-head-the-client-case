@@ -29,7 +29,7 @@
         });
 </script>
 
-<div class="audio">
+<div class="audio radioplayer">
     <div class="audio__container">
         <div class="audio__player">
             <!-- navigation media player-->

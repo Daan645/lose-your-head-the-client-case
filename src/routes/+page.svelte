@@ -2,18 +2,18 @@
   import Tabs from "../lib/molecules/tabs.svelte";
   import Schedule from "../lib/molecules/schedule.svelte";
   import WeekSelectie from "../lib/molecules/WeekSelectie.svelte";
-  import Footer from "$lib/organism/Footer.svelte";
-  import Radioplayer from "../lib/organism/Radioplayer.svelte";
+  import Mediaplayer from "../lib/media-player/Mediaplayer.svelte";
+  import Footer from '../lib/organism/Footer.svelte';
 
   export let data;
 </script>
 
 <main>
-  <!-- <Tabs /> -->
-  <WeekSelectie class="weekselectie"></WeekSelectie>
-  <Schedule class="schedule" {data}></Schedule>
-  <Radioplayer class="radioplayer"></Radioplayer>
-  <Footer class="footer"></Footer>
+  <Tabs class="tabs"/>
+  <WeekSelectie class="weekselectie" />
+  <Schedule class="schedule" {data} />
+  <Mediaplayer class=""/>  
+  <Footer/>  
 </main>
 
 <style>
@@ -24,19 +24,24 @@
   :global(.schedule) {
     grid-area: schedule;
   }
-  :global(article.audio) {
+  :global(.radioplayer) {
     grid-area: radioplayer;
   }
   :global(footer) {
     grid-area: footer;
   }
+  :global(.tabs) {
+    grid-area: tabs;
+  }
+
 
   @media only screen and (min-width: 982px) {
     main {
       display: grid;
-      grid-template-columns: 300px 100%;
+      grid-template-columns: 300px auto;
       grid-template-rows: auto;
       grid-template-areas:
+        "radioplayer tabs"
         "radioplayer weekselectie"
         "radioplayer schedule"
         "radioplayer footer";
