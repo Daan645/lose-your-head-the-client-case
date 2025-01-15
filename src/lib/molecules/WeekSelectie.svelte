@@ -60,8 +60,7 @@
           <button
             class="day-buttons"
             class:button-active={day === currentDayNumber}
-            class:new-week={dayOfWeek === "zondag"}
-            <!-- Weergeef de dag in een string-->
+            class:new-week={dayOfWeek === "zondag"}>
             <span>{dayOfWeek}</span>
             <!-- Weergeef de dag als een nummer -->
             <span>{day}</span>
