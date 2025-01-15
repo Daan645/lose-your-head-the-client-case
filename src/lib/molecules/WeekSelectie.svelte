@@ -61,7 +61,6 @@
             class="day-buttons"
             class:button-active={day === currentDayNumber}
             class:new-week={dayOfWeek === "zondag"}
-          >
             <!-- Weergeef de dag in een string-->
             <span>{dayOfWeek}</span>
             <!-- Weergeef de dag als een nummer -->
@@ -171,7 +170,8 @@
     ); /* Rechter blur */
   }
 
-  button {
+  button,
+  .day-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -188,7 +188,6 @@
       transition: 0.2s ease-in;
     }
   }
-
   .day-buttons {
     border-right: solid 8px rgb(239, 239, 239);
     border-left: solid 8px rgb(239, 239, 239);
@@ -197,7 +196,6 @@
       border-right: solid 10px rgb(239, 239, 239);
     }
   }
-
   .button-active {
     background-color: var(--secondary-color);
     color: var(--light);
@@ -259,8 +257,8 @@
     }
   }
 
-  button:hover span:first-of-type,
-  button:focus span:first-of-type {
+  .day-button:hover span:first-of-type,
+  .day-button:focus span:first-of-type {
     color: var(--light);
   }
 
@@ -268,7 +266,6 @@
     color: #5d5d5d;
     font-size: 0.8em;
   }
-
   button span:nth-of-type(2) {
     font-size: 1.5em;
   }
