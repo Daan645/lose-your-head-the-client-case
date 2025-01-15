@@ -21,10 +21,11 @@
 
 
 <style>
-    li{
+    li {
         border-bottom: 2px solid #EDEDED;
     }
-    a{
+
+    a {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -34,37 +35,42 @@
         
     }
 
-    svg{
+    svg {
         transition: ease-out 0.3s;
     }
 
-    a div{
+    a div {
         display: flex;
         flex-direction: column;
         gap: 0.5em;
     }
 
-    a div span:nth-child(1){
+    a div span:nth-child(1) {
         font-weight: 600;
         font-size: 1.1em;
     }
 
-    a:hover ,  a:active , a:focus , li:hover , li:focus{
+    a:hover ,
+    a:active , 
+    a:focus , 
+    li:hover , 
+    li:focus {
         color: var(--primary-color);
     }
 
-    a:focus> svg{
+    a:focus> svg {
         margin-right: -4px;
         transition: ease-out 0.3s;
         transform: scale(125%);
     }
 
     @media (prefers-reduced-motion: reduce) {
-        a, svg {
+        a, 
+        svg {
         transition: none;
         transform: none;
         }
-        a:focus{
+        a:focus {
         transition: none;
         transform: none;
     }

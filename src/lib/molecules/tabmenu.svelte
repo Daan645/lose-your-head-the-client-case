@@ -1,4 +1,5 @@
 <script>
+    
 import Tabmenu_link from '../atoms/Tabmenu_link.svelte';
 import Slideinmenu from "../molecules/slideinmenu.svelte";
 
@@ -8,8 +9,6 @@ function toggleMenu() {
     menuVisible = !menuVisible;
 }
 </script>
-
-
 
 <ul>
     <li><Tabmenu_link label="home" /></li>

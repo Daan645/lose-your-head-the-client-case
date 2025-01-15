@@ -25,7 +25,7 @@
     </a>
 
 <style>
-    a{
+    a {
         padding: 2em 0em;
         display: flex;
         flex-direction: column;
@@ -39,7 +39,9 @@
 
     }
 
-     a:focus, a:active, a:hover{
+    a:focus, 
+    a:active, 
+    a:hover {
         transform: scale(102%);
         transition: ease-in 0.3s;
     }
@@ -51,7 +53,8 @@
     }
 
     a:focus, 
-    a:active , a:hover {
+    a:active, 
+    a:hover {
         color: var(--primary-color);
     }
 
