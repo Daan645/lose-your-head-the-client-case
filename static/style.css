@@ -40,12 +40,12 @@
   font-weight: 900;
   font-style: normal;
 }
-
+ 
 @font-face {
-  font-family: "BrutalType";
-  src: url("/fonts/BrutalType.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
+    font-family: "BrutalType";
+    src: url("/fonts/BrutalType.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
 }
 
 /* Dit zijn op dit moment de fonts die we gebruiken in het ontwerp, als je meer wilt aanmaken moet je een nieuwe @font-face maken */
@@ -127,7 +127,7 @@ a {
 
      https://caniuse.com/mdn-css_properties_container-type_inline-size
   */
-body> :is(header, footer),
+body > :is(header, footer),
 main,
 section,
 article {
@@ -156,10 +156,5 @@ li {
 
 
 body {
-  background-color: #FAFAFA
-}
-
-
-main {
-  position: relative;
+   background-color: #FAFAFA
 }
