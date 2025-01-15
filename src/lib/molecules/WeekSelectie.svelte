@@ -14,7 +14,7 @@
     carousel?.scrollBy({ left: 200, behavior: "smooth" });
 
   let showCurrentMonth = monthNames[month];
-  let daysInMonth = loadMonthDays(year, month); 
+  let daysInMonth = loadMonthDays(year, month);
   let dayOfWeekButton;
   let carousel;
 
@@ -57,7 +57,7 @@
       {#each daysInMonth as { dayOfWeek, day }}
         <li bind:this={dayOfWeekButton} class="day-of-week-button">
           <!-- als de dag gelijk is aan de nummer van de huidige dag krijgt de button de active class -->
-           <a
+          <a
             data-sveltekit-reload
             href="/?datum={year}-{month + 1}-{day}"
             class:button-active={day === currentDayNumber}
@@ -92,6 +92,7 @@
 
 <style>
   .month-overview {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,7 +119,6 @@
     }
   }
 
-  
   ol {
     display: flex;
     overflow-x: scroll;
@@ -186,7 +186,7 @@
   .button-active {
     background-color: var(--secondary-color);
     color: var(--light);
-    & span{
+    & span {
       color: var(--light);
     }
   }
@@ -209,8 +209,6 @@
   .day-button:focus span:first-of-type {
     color: var(--light);
   }
-
-
 
   .day-button span:nth-of-type(2) {
     font-size: 1.5em;

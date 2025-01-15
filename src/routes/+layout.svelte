@@ -1,13 +1,9 @@
-<script>    
-    import Header from "../lib/organism/Header.svelte";
-    import Mobilenav from "../lib/organism/Mobilenav.svelte";
-    
+<script>
+  import Header from "../lib/organism/Header.svelte";
+  import Mobilenav from "../lib/organism/Mobilenav.svelte";
 </script>
 
-<Header/>
+<Header />
 <slot></slot>
-<Mobilenav/>
 
-
-
-
+<Mobilenav />

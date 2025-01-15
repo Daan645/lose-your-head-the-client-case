@@ -61,7 +61,7 @@
     position: absolute;
     left: -500px;
     height: 1290px;
-    width: 312px;
+    width: 300px;
     border-left: var(--tertairy) 1px solid;
     top: -360px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
