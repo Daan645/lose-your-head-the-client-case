@@ -1,7 +1,9 @@
 <script>
   // components imports
-  import ProgramCard from "../molecules/programcard.svelte";
+  import ProgramCard from "../molecules/programCard.svelte";
   import ScheduleTimes from "../atoms/schedule-times.svelte";
+  import MarkdownIt from "markdown-it";
+  const md = new MarkdownIt();
 
   // General imports
   import { onMount } from "svelte";
@@ -28,7 +30,11 @@
 
     // Als de cover niet bestaat of er geen users zijn, gebruik dan de thumbnail van de show
     // Als er geen thumbnail of cover is gebruik een lege string
-    return firstUser ? `/${firstUser}` : thumbnail ? `/${thumbnail}` : "";
+
+    return {
+      cover: firstUser ? `/${firstUser}` : thumbnail ? `/${thumbnail}` : "",
+      thumbnail: thumbnail ? `/${thumbnail}` : "",
+    };
   }
 
   // Helper function to get the show time
@@ -99,8 +105,6 @@
   onMount(() => {
     updateScheduleLine();
     setInterval(updateScheduleLine, 1000);
-
-    console.log("ingelade");
   });
 </script>
 
@@ -122,10 +126,16 @@
         <div class="schedule__station-shows">
           {#each stationShows as show, i}
             <ProgramCard
+              showLogo={stationShows[0].mh_shows_id?.show?.radiostation?.logo
+                ?.id}
               programName={show.mh_shows_id?.show?.name || "Unknown Program"}
               time={getShowTime(show)}
-              imgSrc={getImageSource(show)}
-              programLink={`/`}
+              jdImgSrc={getImageSource(show).cover}
+              thumbnailImgSrc={getImageSource(show).thumbnail}
+              programLink={show.id}
+              description={md.render(
+                show.mh_shows_id?.show?.body || "Unknown description",
+              )}
             />
           {/each}
         </div>

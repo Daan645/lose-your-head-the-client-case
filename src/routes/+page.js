@@ -1,7 +1,5 @@
-import getData from "$lib/fetch-data";
-
 /** @satisfies {import('./$types').Actions} */
-
+import getData from "$lib/fetch-data";
 
 export async function load({ params, url }) {
   const currentDay = new Date().toISOString().split('T')[0];
