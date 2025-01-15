@@ -1,10 +1,12 @@
 <script>
+  import MediaplayerCasting from "../atoms/Mediaplayer-casting.svelte";
   import MediaplayerKijklive from "../atoms/Mediaplayer-kijklive.svelte";
   import MediaplayerPlaystop from "./Mediaplayer-playstop.svelte";
   import MediaplayerAppstudio from "../atoms/Mediaplayer-appstudio.svelte";
 </script>
 
 <ul class="audio__group">
+  <MediaplayerCasting />
   <MediaplayerKijklive />
   <MediaplayerPlaystop />
   <MediaplayerAppstudio />
@@ -20,11 +22,11 @@
     padding: 0.5rem;
     margin-left: auto;
 
-    @media only screen and (min-width: 600px) and (max-width: 980px) {
+    @media screen and (min-width: 600px) and (max-width: 980px) {
       justify-content: flex-end;
     }
 
-    @media only screen and (min-width: 982px) {
+    @media screen and (min-width: 982px) {
       align-items: unset;
       margin-left: unset;
       margin-bottom: 180px;

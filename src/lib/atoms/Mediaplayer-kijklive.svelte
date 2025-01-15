@@ -1,23 +1,28 @@
 <li>
-  <a href="/" aria-label="Kijk live" class="audio__kijk-live">
+  <button aria-label="kijk live" class="audio__livehidden-button">
     <img
       width="93"
       class="audio__group-live"
-      id="audio__live-btn"
-      alt="kijk live button"
+      alt=""
       src="/live-icon.svg"
-    />
-    <p>Kijk live</p>
-  </a>
+    >
+    Kijk live
+  </button>
 </li>
 
 <style>
-  .audio__kijk-live {
-    @media only screen and (min-width: 320px) and (max-width: 980px) {
+  .audio__livehidden-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--grey);
+
+
+    @media screen and (min-width: 320px) and (max-width: 980px) {
       display: none;
     }
     
-    @media only screen and (min-width: 982px) {
+    @media screen and (min-width: 982px) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -28,9 +33,5 @@
   .audio__group-live {
     width: 1.25rem;
     height: 1.25rem;
-  }
-
-  p {
-    color: var(--grey);
   }
 </style>

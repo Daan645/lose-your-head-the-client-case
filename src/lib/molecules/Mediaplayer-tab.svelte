@@ -3,12 +3,12 @@
 </script>
 
 <ul class="audio__list">
-  <li class="audio__link"><a href="/">LIVE</a></li>
-  <li class="audio__link"><a href="/">STATIONS</a></li>
+  <li class="audio__link"><a href="/">live</a></li>
+  <li class="audio__link"><a href="/">stations</a></li>
   <MediaPopOut />
 </ul>
 
-<span class="audio__line"></span>
+<hr>
 
 <style>
   a {
@@ -22,10 +22,10 @@
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
-    font-family: "BrutalType";
     font-weight: 900;
     align-items: center;
     width: 100%;
+    
     @media only screen and (min-width: 320px) and (max-width: 980px) {
       display: none;
     }
@@ -33,9 +33,10 @@
 
   .audio__link {
     list-style-type: none;
+    text-transform: uppercase;
   }
 
-  .audio__line {
+  hr {
     @media only screen and (min-width: 320px) and (max-width: 980px) {
       display: none;
     }

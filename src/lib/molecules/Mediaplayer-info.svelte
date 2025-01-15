@@ -25,7 +25,7 @@
   }
   
   .audio__figure {
-    @media only screen and (min-width: 982px) {
+    @media screen and (min-width: 982px) {
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
@@ -36,22 +36,22 @@
     height: 3.75rem;
     width: 3.75rem;
 
-    @media only screen and (min-width: 982px) {
+    @media screen and (min-width: 982px) {
       width: 10rem;
       height: 10rem;
     }
   }
 
   .audio__dj-text {
-    @media only screen and (min-width: 320px) and (max-width: 980px) {
+    @media screen and (min-width: 320px) and (max-width: 980px) {
       display: none;
     }
   }
   .audio__dj {
-    @media only screen and (min-width: 320px) and (max-width: 980px) {
+    @media screen and (min-width: 320px) and (max-width: 980px) {
       display: none;
     }
-    @media only screen and (min-width: 982px) {
+    @media screen and (min-width: 982px) {
       width: 0.8rem;
     }
   }

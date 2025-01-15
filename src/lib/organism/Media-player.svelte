@@ -2,6 +2,7 @@
   import MediaTab from "../molecules/Mediaplayer-tab.svelte";
   import MediaplayerInfo from "../molecules/Mediaplayer-info.svelte";
   import MediaplayerButtons from "../molecules/Mediaplayer-buttons.svelte";
+  import MediaplayerQueue from "../molecules/Mediaplayer-queue.svelte";
 </script>
 
 <div class="audio">
@@ -10,6 +11,7 @@
       <MediaTab />
       <MediaplayerInfo />
       <MediaplayerButtons />
+      <MediaplayerQueue />  
     </div>
   </div>
 </div>
@@ -37,12 +39,13 @@
     border-radius: 5px;
     position: absolute;
     bottom: 125px;
-    @media only screen and (min-width: 600px) and (max-width: 980px) {
+
+    @media screen and (min-width: 600px) and (max-width: 980px) {
       width: 98vw;
     }
 
-    @media only screen and (min-width: 982px) {
-      position: unset;
+    @media screen and (min-width: 982px) {
+      position: unset; 
       height: 100%;
       width: 312px;
       display: flex;

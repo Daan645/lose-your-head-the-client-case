@@ -34,6 +34,7 @@
         align-items: center;
         justify-content: center;
         width: 100vw;
+        
         @media only screen and (min-width: 960px) {
             justify-content: space-between;
             padding: 1rem 2rem;
